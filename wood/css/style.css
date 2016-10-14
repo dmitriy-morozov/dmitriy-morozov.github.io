@@ -1,0 +1,217 @@
+/* ********** глобальные настройки ************
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+body {
+    font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+    width: 100%;
+    height: 800px;
+    background: #fff;
+}
+
+.wrapper {
+    width: 947px;
+    position: relative;
+    margin: 20px auto;
+    border: 8px solid #ccc;
+    padding: 30px 30px;
+    min-height: 100%;
+}
+
+.wrapper a { text-decoration: none }
+
+.header {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.header>a {
+    float: left;
+    width: 310px;
+    height: 45px;
+    margin-right: 145px;
+}
+
+.menu ul { float: right }
+
+.menu li {
+    display: block;
+    list-style: none;
+    float: left;
+    width: auto;
+    padding: 10px 0px;
+    margin-left: 40px;
+}
+
+.menu li a {
+    color: #B8B8B8;
+    font-size: 14px;
+}
+
+.menu li:first-child a { color: #8F6A47 }
+
+.menu:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.promo {
+    position: relative;
+    margin: 20px 0px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 10px;
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.3em;
+    
+}
+
+.promo a {
+    color: #8F6A47;
+    font-weight: bold;
+}
+
+.container {
+    width: 640px;
+    float: left;
+    color: #B8B8B8;
+}
+
+.content .one, .content .two, .content .three, .content .four {
+    width: 270px;
+    height: 240px;
+    float: left;
+    padding: 10px 20px;
+}
+
+.content h3
+{ padding-top: 10px; 
+}
+
+.content a { color: #979797 }
+
+.content .one img, .content .two img, .content .three img, .content .four img {
+    border: 3px solid #E4E4E4;
+    padding: 2px 2px;
+}
+
+.container .button {
+    padding: 10px 10px;
+    float: right;
+}
+
+.right-sidebar {
+    width: 290px;
+    float: right;
+    padding: 10px 0px;
+}
+
+.right-sidebar li { list-style: none }
+
+.right-sidebar .twitter-form {
+    background: url("../image/twitt.png") no-repeat;
+    height: 150px;
+    width: 257px;
+}
+
+.twitter-form  p {
+    width: 225px;
+    padding: 10px;
+    font-size: 12px;
+    color: #939393;
+}
+
+.twitter-form span {
+    margin-top: 50px;
+    float: right;
+    width: 100%;
+    text-align: right;
+    position: relative;
+    margin-right: 40px;
+    color: #ADADAD;
+}
+
+.twitter-form .logo {
+    position: absolute;
+    bottom: -10px;
+    right: -40px;
+}
+
+.right-sidebar .navigation {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.right-sidebar .navigation h3 {
+    margin-bottom: 10px;
+    color: #404040;
+}
+
+.right-sidebar .navigation li {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 5px 0px;
+}
+
+.right-sidebar .navigation li:first-child { border-top: 1px solid #EEEEEE }
+
+.right-sidebar .navigation li:hover { background-color: #EAEAFF }
+
+.right-sidebar .navigation a { color: #939393 }
+
+.right-sidebar .contact {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.right-sidebar .contact h3 {
+    margin-bottom: 10px;
+    color: #404040;
+}
+
+.right-sidebar .contact li {
+    padding: 5px 0px;
+    color: #939393;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    height: 85px;
+    width: 940px;
+    border-top: 1px solid #ccc;
+}
+
+.footer .copyright {
+    padding-top: 30px;
+    padding-left: 10px;
+    float: left;
+    width: 50%;
+}
+
+.footer .twitter, .footer .flickr {
+    margin-top: 15px;
+    float: right;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+.footer img {
+    float: left;
+    padding-right: 10px;
+}
+
+.footer p {
+    padding-top: 10px;
+    color: #B8B8B8;
+}
