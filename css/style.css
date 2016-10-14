@@ -1,17 +1,6 @@
 /* ********** глобальные настройки ************
    ================================================== */
 
-/* сбрасываем свойства */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 
 body {
@@ -21,10 +10,7 @@ body {
     margin: 0 0;
     padding: 0 0;
 }
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 h2,
 h3 { text-transform: uppercase }
@@ -425,9 +411,18 @@ b {
     padding-left: 20px;
 }
 
+.order select option {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
 .order input::-webkit-input-placeholder,
 .order select::-webkit-input-placeholder,
-.order textarea::-webkit-input-placeholder { color: #B49157 }
+.order textarea::-webkit-input-placeholder { 
+    color: #B49157 }
 
 .order select {
     width: 600px;
@@ -458,25 +453,74 @@ b {
 }
 
 .checkbox-area input {
-    margin-top: 40px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 200px;
-    vertical-align: middle;
-    color: red;
-    background: red;
+     display: none;
+
 }
 
 .checkbox-area label {
     margin-top: 40px;
     display: inline-block;
-    width: 550px;
+    width: 700px;
     height: 20px;
-    line-height: 20px;
-    margin-left: 20px;
-    font-size: 16px;
+    line-height: 40px;
+    font-size: 16px; 
 }
+
+.checkbox-area label span{
+ vertical-align: top;
+    margin-left: 20px;
+}
+
+
+.check {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    margin-left: 200px;
+    background: #E6B66C;
+    cursor: pointer;
+    
+}
+
+.check:after {
+    content: "";
+    position: absolute;
+    top:20px;
+    left:15px;
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background: black;
+    transform:rotate(-45deg);
+    display: none;
+
+}
+
+.check:before {
+    content: "";
+    position: absolute;
+    top:23px;
+    left:10px;
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    background: black;
+    transform:rotate(45deg);
+    display: none;
+
+}
+
+
+.checkbox-area input:checked ~ .check:before,
+.checkbox-area input:checked ~ .check:after
+ {
+    display: block;
+}
+
+
 
 .order input[type="submit"] {
     display: inline-block;
@@ -521,10 +565,7 @@ b {
 }
 
 .footer-menu li {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
     text-transform: uppercase;
     padding: 20px 50px 20px 0px;
 }
