@@ -19,7 +19,7 @@ img {
 }
 
 body {
-    min-width: 960px;
+    min-width: 300px;
     font: 400 16px/1.375 "Roboto", "Arial", sans-serif;
     color: #333333;
     background-color: #849d8f;
@@ -40,7 +40,7 @@ body input:focus {
 }
 
 .container {
-    min-width: 960px;
+    min-width: 300px;
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 40px;
@@ -111,7 +111,6 @@ h2 { font-size: 35px }
 
 .header-menu {
     display: inline-block;
-    max-width: 400px;
     margin-left: 20px;
     margin-bottom: 50px;
     padding-left: 0px;
@@ -129,8 +128,7 @@ h2 { font-size: 35px }
     position: absolute;
     width: 60px;
     height: 20px;
-
-        z-index: 32;
+    z-index: 32;
 }
 
 .header-menu a {
@@ -211,7 +209,8 @@ h2 { font-size: 35px }
 
 .sub-list .current { background: #d07058 }
 
-.header-form { float: right }
+.header-form { float: right;
+ }
 
 .search {
     display: inline-block;
@@ -481,7 +480,7 @@ h2 { font-size: 35px }
 }
 
 .slide .p-promo {
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
     margin-top: 240px;
     margin-bottom: 40px;
