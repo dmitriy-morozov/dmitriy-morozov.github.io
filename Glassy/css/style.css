@@ -22,7 +22,7 @@ img {
 }
 
 body {
-min-width: 900px;
+min-width: 960px;
 font: 400 16px/1.375 "Roboto", "Arial", sans-serif;
   color: #333333;
   background-color: #849d8f;
@@ -659,7 +659,7 @@ margin-bottom: 10px;
     font-size: 35px;
 }
 .banner  p {
-     margin: 0;
+     margin-bottom: 10px;
   padding: 0;
    font-size: 18px;
    line-height: 22px;
@@ -689,7 +689,7 @@ display: flex;
 }
 
     .promo-sale { 
-        
+
 margin:0 auto;
     z-index: 4;}
 
