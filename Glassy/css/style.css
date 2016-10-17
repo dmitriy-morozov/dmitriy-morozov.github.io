@@ -665,7 +665,9 @@ margin-bottom: 10px;
    line-height: 22px;
 }
 
-.banner2 {background:url(../img/chocolate.png) no-repeat #734733;background-size: 100%; }
+.banner2 {
+    background:url(../img/chocolate.png) no-repeat #734733;
+    background-size: cover;}
 .banner1 {background:url(../img/raspberries.png) no-repeat #98000e; 
 background-size: cover;
 margin-right: 20px;}
