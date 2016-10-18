@@ -107,8 +107,8 @@ h2 { font-size: 35px }
 }
 
 .header-logo {
-    float: left;
-    margin-left: 10px;
+    display: inline-block;
+       margin-left: 10px;
 }
 
 .header-menu {
@@ -555,12 +555,13 @@ input,
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;    
 }
 
 .banner {
     position: relative;
     min-height: 230px;
-    min-width: 210px;
+    width: 47%;
     padding: 15px 20px 30px 20px;
     color: white;
     font-weight: bold;
@@ -573,6 +574,7 @@ input,
     padding: 0;
     margin-bottom: 10px;
     font-size: 35px;
+    word-wrap: break-word;
 }
 
 .banner  p {
@@ -600,9 +602,6 @@ input,
     bottom: 20px;
 }
 
-.promo {
-  
-}
 
 .promo-sale {
     margin: 0 auto;
