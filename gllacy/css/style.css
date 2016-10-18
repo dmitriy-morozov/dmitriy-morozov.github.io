@@ -102,6 +102,8 @@ h2 { font-size: 35px }
 .header-top {
     padding-top: 10px;
     min-height: 70px;
+     display:flex;
+  
 }
 
 .header-logo {
@@ -110,10 +112,11 @@ h2 { font-size: 35px }
 }
 
 .header-menu {
-    display: inline-block;
+   flex-grow:1;
     margin-left: 20px;
     margin-bottom: 50px;
     padding-left: 0px;
+
     
 }
 
@@ -209,8 +212,6 @@ h2 { font-size: 35px }
 
 .sub-list .current { background: #d07058 }
 
-.header-form { float: right;
- }
 
 .search {
     display: inline-block;
@@ -559,7 +560,7 @@ input,
 .banner {
     position: relative;
     min-height: 230px;
-    min-width: 260px;
+    min-width: 210px;
     padding: 15px 20px 30px 20px;
     color: white;
     font-weight: bold;
@@ -600,26 +601,34 @@ input,
 }
 
 .promo {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  
 }
 
 .promo-sale {
     margin: 0 auto;
     z-index: 4;
+ 
+
 }
 
+.promo-sale ul {
+       padding: 0 0;
+        display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+
 .promo-sale li {
-    float: left;
     list-style: none;
     position: relative;
     max-width: 206px;
     min-height: 330px;
     text-align: center;
-    margin: ;
-    margin-top: 30px;
+    margin:30px auto;
     z-index: 4;
 }
 
@@ -679,7 +688,8 @@ input,
 .promo-sale li:hover .ref { text-decoration: none }
 
 .seo {
-    margin: 0 20px;
+    margin: 0 auto;
+    min-width: 110px;
     display: inline-block;
     padding: 20px 30px 30px 20px;
     color: black;
@@ -718,14 +728,13 @@ input,
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 20px;
+
 }
 
 .news {
-    position: relative;
     margin: 40px auto;
     min-height: 220px;
-    width: 420px;
+    width: 50%;
     padding: 20px;
     color: black;
     font-weight: bold;
@@ -761,16 +770,19 @@ input,
 }
 
 .news1 {
-    background: url(../img/blog-1.png) repeat #ffffff;
+    background: url(../img/blog-1.png) no-repeat #ffffff;
+    background-size: cover;
     margin-right: 20px;
 }
 
-.news2 { background: url(../img/blog-2.png) repeat #ffffff }
+.news2 { background: url(../img/blog-2.png) no-repeat #ffffff;
+background-size: cover; }
 
-.mail-form { margin-top: 20px }
+.mail-form { margin-top: 20px; 
+}
 
 .mail-form input {
-    width: 222px;
+    width: 50%;
     display: inline-block;
     border: 1px solid #b2b2b2;
     padding: 10px;
@@ -778,7 +790,7 @@ input,
     border-radius: 5px;
 }
 
-.mail-form .btn { display: inline-block }
+.mail-form .btn { display: inline-block; }
 
 .map {
     background: #ece5c8;
@@ -790,7 +802,6 @@ input,
 .map-text {
     position: absolute;
     width: 300px;
-    height: 300px;
     background: white;
     top: 65px;
     right: 20px;
@@ -812,12 +823,26 @@ input,
     font-weight: bold;
 }
 
+
+.contact-form-block {
+background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+display: none;
+} 
+
 .contact-form {
     display: block;
-    position: absolute;
-    top: -65px;
-    right: 200px;
-    width: 480px;
+background-color: #00f;
+  position: relative;
+        margin: 0px auto;
+    min-width: 240px;
+      max-width: 500px;
+          min-height: 410px;
     background: white;
     padding: 10px 20px;
     z-index: 100;
@@ -825,9 +850,9 @@ input,
 }
 
 .contact-form input,
-textarea {
+.contact-form textarea {
     display: inline-block;
-    width: 270px;
+    width: 70%;
     border: 1px solid #b2b2b2;
     padding: 10px;
     margin-bottom: 10px;
@@ -835,22 +860,43 @@ textarea {
     font-size: 14px;
 }
 
-textarea {
-    width: 430px;
-    height: 160px;
+.contact-form textarea {
+    width: 90%;
+    min-height: 50px;
     text-align: top;
 }
 
 .contact-form h3 { font-size: 24px }
 
-.contact-form img {
-    cursor: pointer;
-    float: right;
-}
 
 .contact-form button {
     margin-top: 20px;
     float: right;
+}
+
+.contact-form p{
+      position: absolute;
+  right:30px;
+  top:0px;
+}
+
+.contact-form p::before,
+.contact-form p::after {
+    content: "";
+    display: block;
+  position: absolute;
+    width: 25px;
+          height: 2px;
+    background: black;
+    z-index: 100;
+}
+
+.contact-form p::before{
+    transform: rotate(45deg);
+}
+
+.contact-form p::after{
+    transform: rotate(-45deg);
 }
 
 /*footer*/
@@ -904,13 +950,17 @@ footer {
 }
 
 .footer-menu {
+        margin: 0px auto;
     display: inline-block;
-    width: 350px;
+ 
 }
 
 .nav-menu {
     padding: 0;
     margin: 0;
+    flex-grow: 1;
+
+       max-width: 350px;
 }
 
 .footer-menu li {

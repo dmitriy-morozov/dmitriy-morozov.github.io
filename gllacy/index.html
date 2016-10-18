@@ -18,8 +18,8 @@
  <input type="radio" name="slider__check" class="slider__check slider__check-3" id="slider__check-3">
 
 
-<div class="bg">
-      <header class="container">
+<div class="bg container">
+      <header>
          <div class="header-top container clearfix">
             <div class="header-logo">
                <img class="logo" height="63" width="153" src="img/logo.svg" alt="GllacyShop">
@@ -260,12 +260,13 @@
    </p>
  <button onclick="openbox('modal'); return false" type="submit" class="btn btn-2  btn-form">Форма обратной связи</button> 
 
+ </div>
+</div>
 
-
-
-<div id="modal" class="contact-form" style="display: none;">
+<div id="modal" onclick="document.getElementById('modal').style.display='none';" class="contact-form-block container">
+<div  class="contact-form">
    <form action="#" method="post">
-
+    <p style="cursor: pointer;" onclick="document.getElementById('modal').style.display='none';"></p>
    <h3>Мы обязательно вам ответим!</h3>
    
                <input type="text" placeholder="Как вас зовут?">
@@ -273,11 +274,9 @@
                <textarea  cols="50" rows="6"  placeholder="Напишите что-нибудь..."></textarea>
             <button type="submit" class="btn btn-3">Отправить</button> 
                   </form>
-       
+      
                </div>
                </div>
-</div>
-
 </main>
 
 <footer class="container">
