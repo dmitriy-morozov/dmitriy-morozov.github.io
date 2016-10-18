@@ -688,7 +688,7 @@ input,
 
 .seo {
     margin: 0 auto;
-    min-width: 110px;
+    width: 100%;
     display: inline-block;
     padding: 20px 30px 30px 20px;
     color: black;
