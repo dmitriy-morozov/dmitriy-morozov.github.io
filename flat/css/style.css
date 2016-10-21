@@ -1858,4 +1858,32 @@ h3 { font-size: 36px }
     }
 
     .map-center { bottom: -20px }
+
+
+    .footer-copyright .btn-slider.slider:before {
+    width: 25px;
+    height: 25px;
+
+}
+
+.footer-copyright .slider:after {
+
+    top: 40%;
+    width: 10px;
+    height: 10px;
+}
+
+.footer-copyright .btn-slider {
+
+    right: -20px;
+    bottom: -10px;
+}
+
+
+.footer-copyright .btn-slider .slider {
+
+    width: 25px;
+    height: 25px;
+
+}
 }
