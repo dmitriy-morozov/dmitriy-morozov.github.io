@@ -1834,7 +1834,7 @@ height: 15px;
 
 
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 650px)  {
 
 h1 { font-size: 48px }
 h2 { font-size: 36px }
@@ -1988,6 +1988,12 @@ margin-left: 20px;
 
 .blog-posts  {
   display: table-row;
+
+}
+
+.blogpost {
+ text-align: center;
+ width: 100%;
 }
 
 .blog-navigation {
