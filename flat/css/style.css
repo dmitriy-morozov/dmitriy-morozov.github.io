@@ -112,12 +112,12 @@ h3 { font-size: 36px }
 .header-top {
     display: block;
     min-height: 70px;
-   border: 1px solid red;
+
   
 }
 
 .header-logo {
-    border: 1px solid red;
+
     display: inline-block;
     width: 12%;
      vertical-align: middle; 
@@ -142,7 +142,7 @@ h3 { font-size: 36px }
 }
 
 .header-menu {
-    border: 1px solid red;
+
     vertical-align: middle; 
     text-align: center;
   display: inline-block;
@@ -192,7 +192,7 @@ h3 { font-size: 36px }
 
 
 .header-form{ 
-     border:1px solid red;
+
   display: inline-block;
      vertical-align: middle; 
      text-align: center;
@@ -567,7 +567,7 @@ text-align: center;
 
 
  padding: 0;
- border: 1px solid blue;
+
 }
 
 
@@ -692,7 +692,7 @@ text-align: center;
 
 .showcase .slides {
     display: inline-block;  
-border: 1px solid blue;
+
  width: 100%;
 }
 
@@ -1005,8 +1005,7 @@ text-align: left;
 
 
 .blogpost {
-    display: inline-block;  
-  border: 1px solid blue;
+
     width: 42%;
 
     font-weight: bold;
@@ -1330,7 +1329,7 @@ font-weight: bold;}
 
 
 .post-info-bottom {
-        border: 1px solid blue; 
+       
         width: 100%;
     display: inline-block;
     }
@@ -1345,7 +1344,7 @@ vertical-align: middle;
 .post-info .author 
 {
 
- border: 1px solid blue;
+
  margin-left: 5%; 
 display: inline-block;
 width:35%;
@@ -1363,7 +1362,7 @@ font-weight: bold;}
 
 
 .post-info-btn {
-     border: 1px solid blue;
+ 
     display: inline-block;
       width:42%;
     vertical-align: middle;
@@ -1372,7 +1371,7 @@ font-weight: bold;}
 }
 
 .float {float: right;
-border: 1px solid red;
+
 text-align: center;}
 
 .post-info-btn a{
@@ -1527,13 +1526,13 @@ margin:0;
 
 .comment  img {
     width:10%; 
-     border: 1px solid blue;
+   
      vertical-align: top;
 }
 
 .comment .comment-text {
     width:83%; 
-    border: 1px solid blue;
+
 }
 
 .comments .live-comments-h{
@@ -2102,13 +2101,13 @@ display: table;
      margin:0;
   
     margin-top: 10px;
-     border: 1px solid red;
+    
 }
 
 .projects-post .post-4{
     display: block;
 
-    border: 1px solid red;
+  
 }
 
 .projects-post .post img{
