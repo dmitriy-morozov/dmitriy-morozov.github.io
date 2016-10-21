@@ -1789,9 +1789,6 @@ height:auto;}
 
 
 
-@media screen and (max-width: 1400px)  {
-     
-}
 
 @media screen and (max-width: 800px) {
     
@@ -1826,10 +1823,115 @@ height: 45px;
 width: 15px;
 height: 15px;
 
+ }
+
+
+.format {
+ display: block;
+    width: 100%;
+
+}
+
+.format img{
+   
+   
+    width: 30%;
+
+}
+
+.format.iphone:after,
+ .format.iphone:before{
+display: none;
+  }
+
+.image-wrap {
+
+    display: table-row;
+
+}
+
+.promo .image-wrap img {
+width:50%;
+height:auto;
+
+}
+
+.promo  .price p{
+
+text-align: center;
+line-height: 22px;
+
+}
+
+.blog-posts   {
+  display: table-row;
+
+}
+
+.blogpost  {
+text-align: center;
+}
+
+.blogpost img {
+text-align: center;
+ width:100%;
+
+}
+
+.blogpost {
+ text-align: center;
+ width: 100%;
+}
+
+.blog-navigation {
+  display: table-row;
+   
+}
+
+
+.contact {
+display: block;
+ width: 100%;
+ text-align: center;
+
+}
+
+.contact-us .contact-h{
+    text-align: center;
+  line-height: 22px;
   
 }
 
+
+.contact.address,
+.contact.phone,
+.contact.social {
+      width: 100%;
+     
+     
 }
+
+.address {
+    padding-left: 0px;
+}
+
+.address img{
+    position: relative;
+top:20px;
+width: 10%;
+   
+}
+
+
+.contact.phone:after,
+ .contact.phone:before{
+display: none;
+
+  }
+
+
+
+ }
 
 
 
