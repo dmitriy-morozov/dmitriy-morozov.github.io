@@ -863,6 +863,7 @@ text-align: center;
 
 .projects-post .post-4{
 margin-top: 30px;
+
 }
 
 
@@ -871,7 +872,7 @@ margin-top: 30px;
     margin-top: -15px;
 height: 100%;
 
-position: relative;
+
 }
 
 
@@ -1836,9 +1837,9 @@ height: 15px;
 
 @media screen and (max-width: 650px)  {
 
-h1 { font-size: 48px }
-h2 { font-size: 36px }
-h3 { font-size: 28px }
+h1 { font-size: 48px;   line-height: 26px; }
+h2 { font-size: 36px;   line-height: 26px; }
+h3 { font-size: 28px;   line-height: 26px; }
 
   
 .header-logo {
@@ -1857,7 +1858,7 @@ h3 { font-size: 28px }
 
     .header-menu li {
     display: inline-block;
-    width: 30%;
+    width: 100%;
     }
 
 
@@ -1886,12 +1887,12 @@ height: 35px;
 }
 
 .slider-label1 {
-right:-50px;
+right:-40px;
 
 }
 
 .slider-label2 {
-left:-50px;
+left:-40px;
 
 }
 
@@ -1909,15 +1910,20 @@ height: 10px;
 }
 
 .format img{
-    float: left;
-    width: 40%;
+   
+   
+    width: 50%;
+
 }
 
 
 .format  h4 {
-    text-align: center;
-    float: right;
-    line-height: 100px;
+    
+    font-size: 16px;
+    line-height: 22px;
+  
+   margin-bottom: -10px;
+
     vertical-align: middle;
 }
 
@@ -1930,6 +1936,13 @@ height: 10px;
 display: none;
   }
 
+
+.promo  .promo-h {
+    font-size: 24px;
+    line-height: 28px;
+
+
+}
 
 
 
@@ -1951,19 +1964,25 @@ text-align: center;
 
 }
 
-.promo  .price {
+.promo  .price p{
 
 text-align: center;
-
-  
+line-height: 22px;
 
 }
 
+.price  span.height {
+
+   line-height: 26px;
+}
+
+.showcase  .showcase-h {line-height: 26px;}
 
 .showcase .slide-portfolio {
-    width: 40%;
-
+    width: 100%;
+  margin: 0;
 }
+
 
 
 .projects-post  {
@@ -1972,17 +1991,29 @@ display: table;
 
 }
 
-.projects-post .post {
-display: table-cell;
-    width: 44%;
-    height: 100%;
-    margin-top: 10px;
+.projects  .projects-h {line-height: 26px;}
 
+.projects-post .post {
+ display: block;
+    width:100%;
+    height: 100%;
+     margin:0;
+  
+    margin-top: 10px;
+     border: 1px solid red;
 }
 
 .projects-post .post-4{
-margin-left: 20px;
+    display: block;
+
+    border: 1px solid red;
 }
+
+.projects-post .post img{
+
+    width: 70%;
+}
+
 
 
 
@@ -2001,13 +2032,21 @@ margin-left: 20px;
    
 }
 
+.top-bar .bar-h {
+text-align: center;
+}
 
 .top-bar .btn-block .btn-1 {
+     margin: 10px 5px;
+    display: inline-block;
  padding: 0;
 }
 
 .post-info .blog-h 
-{width: 100%;}
+{width: 100%;
+    text-align: center;
+    font-size: 24px;
+line-height: 32px;}
 
 
 .post-info .author 
@@ -2033,24 +2072,60 @@ text-align: center;}
     background-size: 100%;
 }
 
+
+.comments .comments-h3{
+    line-height: 52px;
+}
 .comment .comment-text {
 
-    width:80%;
+    width:100%;
 
+}
+
+
+.comment  img {
+   
+    width:20%; 
+  
+}
+
+
+.comments .live-comments-h{
+    display: inline-block;
+    padding-top: 10px;
+    line-height: 24px;
+    text-align: center;
 }
 
 .comments form{
     display: inline-block;
-  
     width:100%;
     margin-bottom:40px;
   
+}
+
+.comments form input{
+    width:100%;
+     padding-top: 10px;
+}
+
+.comments form .email{
+    margin:0;
+margin-bottom: 10px;
 }
 
 
 .contact {
 display: block;
  width: 100%;
+ text-align: center;
+
+}
+
+.contact-us .contact-h{
+    text-align: center;
+  line-height: 22px;
+  
 }
 
 
@@ -2058,8 +2133,19 @@ display: block;
 .contact.phone,
 .contact.social {
       width: 100%;
-         padding-left: 60px;
      
+     
+}
+
+.address {
+    padding-left: 0px;
+}
+
+.address img{
+    position: relative;
+top:20px;
+width: 10%;
+   
 }
 
 
@@ -2070,7 +2156,11 @@ display: none;
   }
 
 
+.footer-copyright {
+  
+    padding: 0px;
 
+}
 
 
 
