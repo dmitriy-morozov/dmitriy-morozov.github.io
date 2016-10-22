@@ -1599,6 +1599,14 @@ h3 { font-size: 36px }
         line-height: 22px;
     }
 
+    .top-bar .bar-h {
+    line-height: 28px;
+    }
+
+    .top-bar .bar-h .btn {
+    line-height: 24px;
+    }
+
     .blog-posts { display: table-row }
 
     .blogpost { text-align: center }
@@ -1828,12 +1836,19 @@ h3 { font-size: 36px }
 
     .blog-navigation { display: table-row }
 
-    .top-bar .bar-h { text-align: center }
+    .top-bar .bar-h { 
+        text-align: center;
+        line-height: 24px;
+    }
 
-    .top-bar .btn-block .btn-1 {
-        margin: 10px 5px;
-        display: inline-block;
+
+    .top-bar .btn-1 {
+       float: right;
         padding: 0;
+    }
+
+    .top-bar .bar-h .btn {
+    line-height: 24px;
     }
 
     .post-info .blog-h {
