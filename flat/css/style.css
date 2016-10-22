@@ -1550,6 +1550,7 @@ h3 { font-size: 36px }
     .comment  img { width: 10% }
 }
 
+
 @media screen and (max-width: 900px) { 
     .slide .promo-h { font-size: 32px }
 
@@ -1638,6 +1639,10 @@ h3 { font-size: 36px }
         top: 20px;
         width: 10%;
     }
+
+    .comment .comment-text { width: 90% }
+
+    .comment  img { width: 10% }
       .comments form {
         display: inline-block;
         width: 100%;
