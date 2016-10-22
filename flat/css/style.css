@@ -1312,7 +1312,7 @@ h3 { font-size: 36px }
 .comments form .comment {
     display: inline-block;
     margin-top: 0px;
-    width: 99%;
+    width: 100%;
 }
 
 .comments form .email {
@@ -1553,9 +1553,9 @@ h3 { font-size: 36px }
     }
 
 
-.comment .comment-text { width: 100% }
+.comment .comment-text { width: 90% }
 
-    .comment  img { width: 20% }
+    .comment  img { width: 10% }
 }
 
 @media screen and (max-width: 900px) { 
