@@ -1535,7 +1535,7 @@ h3 { font-size: 36px }
 
 
 
-@media screen and (max-width: 1200px) { 
+@media screen and (min-width: 1100px) and (max-width: 1300px)  { 
  
       .comments form {
         display: inline-block;
@@ -1552,6 +1552,10 @@ h3 { font-size: 36px }
         padding-top: 10px;
     }
 
+
+.comment .comment-text { width: 100% }
+
+    .comment  img { width: 20% }
 }
 
 @media screen and (max-width: 900px) { 
