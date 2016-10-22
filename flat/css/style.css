@@ -1548,6 +1548,8 @@ h3 { font-size: 36px }
 .comment .comment-text { width: 90% }
 
     .comment  img { width: 10% }
+
+    .map-center { bottom: -20px }
 }
 
 
@@ -1643,6 +1645,19 @@ h3 { font-size: 36px }
     .comment .comment-text { width: 90% }
 
     .comment  img { width: 10% }
+
+   
+
+        .comment .sub-comment {
+   
+    width: 84%;
+}
+
+ .comment .sub-comment .comment-text { width: 100% }
+
+
+    .comment  img { width: 10% }
+
       .comments form {
         display: inline-block;
         width: 100%;
@@ -1658,8 +1673,12 @@ h3 { font-size: 36px }
         padding-top: 10px;
     }
 
+
     .map-center { bottom: -20px }
 }
+
+
+
 
 @media screen and (max-width: 700px) { 
     h1 {
