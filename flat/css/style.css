@@ -1619,6 +1619,16 @@ h3 { font-size: 36px }
         top: 20px;
         width: 10%;
     }
+      .comments form {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .comments form .email {
+        margin: 0;
+        margin-bottom: 10px;
+    }
     .comments form input {
         width: 100%;
         padding-top: 10px;
@@ -1838,7 +1848,7 @@ h3 { font-size: 36px }
 
     .comments form .email {
         margin: 0;
-        margin-bottom: 10px;menu-list
+        margin-bottom: 10px;
     }
 
     .comments form input {
