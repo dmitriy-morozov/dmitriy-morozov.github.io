@@ -1533,6 +1533,27 @@ h3 { font-size: 36px }
 
 .footer-copyright p span { color: yellow }
 
+
+
+@media screen and (max-width: 1200px) { 
+ 
+      .comments form {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .comments form .email {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .comments form input {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+}
+
 @media screen and (max-width: 900px) { 
     .slide .promo-h { font-size: 32px }
 
