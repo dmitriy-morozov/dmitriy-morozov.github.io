@@ -1642,7 +1642,7 @@ h3 { font-size: 36px }
         width: 10%;
     }
 
-    .comment .comment-text { width: 90% }
+    .comment .comment-text { width: 100% }
 
     .comment  img { width: 10% }
 
