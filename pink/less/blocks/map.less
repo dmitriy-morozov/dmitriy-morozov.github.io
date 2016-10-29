@@ -1,0 +1,48 @@
+
+/* map */
+
+.map {
+	position: relative;
+	min-height: 250px;
+	background:url(../img/map.png) no-repeat 50% 100%;
+	background-size: 100%;
+	&::after {
+		content:"";
+		display: block;
+		position: relative;
+
+		width:100%;
+		height:80px;
+		background:url(../img/triangle-white-footer.png) no-repeat 50% 100%;
+		background-size: 100%;
+
+		@media @tablet-widths {
+			height:120px;
+			background:url(../img/triangle-white-footer-tabl.png) no-repeat 50% 100%;
+			background-size: 100%;
+		}
+
+		@media @desktop-widths{
+			height:120px;
+			background:url(../img/triangle-white-footer-des.png) no-repeat 50% 100%;
+			background-size: 100%;
+
+		}
+
+	}
+
+	@media @tablet-widths {
+		min-height: 520px;
+		background:url(../img/map-tab.jpg) no-repeat 50% 100%;
+		background-size: 100%;
+	}
+
+	@media @desktop-widths{
+		min-height: 700px;
+		background:url(../img/map-des.jpg) no-repeat 50% 100%;
+		background-size: 100%;
+
+	}
+
+
+}

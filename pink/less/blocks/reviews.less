@@ -1,0 +1,177 @@
+
+
+/* Reviews */
+
+.reviews{
+
+	@media @desktop-widths{
+		padding-top: 170px;
+		background: url("../img/quotes.png") no-repeat 50% 20%;
+
+	}
+}
+
+.reviews__list {
+	text-align: center;
+	position:relative;
+	margin-top:-5px;
+	padding:0;
+}
+
+.reviews__item{
+	position:relative;
+	margin-top:50px;
+	padding:0;
+	font-size: @font-size-base;
+	color:@black;
+	line-height: 30px;
+
+	@media @tablet-widths {
+		margin-top:15px;
+		padding-bottom: 100px;
+	}
+
+
+	.reviews__author-name {
+		font-size: @font-size-medium;
+		font-weight: bold;
+
+		@media @tablet-widths {
+			position:absolute;
+			left:50%;
+			transform:translatex(-50%);
+			bottom:20px;
+			font-size: 20px;
+		}
+
+		@media @desktop-widths{
+			bottom:-60px;}
+
+		}
+
+		.review__description{
+			display: none;
+
+
+			@media @tablet-widths {
+				display: block;
+				position:absolute;
+				left:50%;
+				transform:translatex(-50%);
+				bottom:0;
+			}
+
+			@media @desktop-widths{
+				bottom:-80px;}
+
+			}
+
+			q { 
+				color:@blue-medium;
+
+				@media @tablet-widths {
+					font-size: @font-size-small_tablet;
+					line-height: 30px;
+				}
+
+			}
+		}
+
+		.slider__review {display: none;}
+		.hide {display: none;}
+
+
+
+
+		/* slider-review */
+
+
+
+		.slider-box{
+			.center();
+			text-align: center;
+			position:relative;
+			height:370px;
+			overflow:hidden;
+
+			@media @tablet-widths {
+				height:240px;
+			}
+
+		}
+		.slider{
+			position:relative;
+			text-align: center;
+			width:32080px;
+			min-height:210px;
+		}
+		.slider .reviews__item{
+			float:left;
+			.center();
+
+			@media @tablet-widths {
+				.center();
+			}
+
+			@media @desktop-widths{
+				padding:20px 100px;
+			}
+		}
+		.slider-box .prev, .slider-box .next{
+
+			display: none;
+			@media @desktop-widths{
+				display:block;
+				position:absolute;
+				top:100px;
+				width:22px;
+				height:41px;
+				cursor:pointer;
+			}
+		}
+
+
+		.slider-box .prev{
+			left:20px;
+			background:url(../img/left-arrow.png) no-repeat 0 0;
+		}
+		.slider-box .next{
+			right:20px;
+			background:url(../img/right-arrow.png) no-repeat 0 0;
+		}
+		.bullets{
+			position:absolute;
+			bottom:0px;
+			left:50%;
+			transform:translatex(-50%);
+			height:31px;
+			vertical-align: middle;
+			padding:0;
+			margin:0;
+
+			list-style:none;
+
+			@media @desktop-widths{
+				display: none;}
+
+			}
+			.bullets li{
+
+				display: inline-block;
+				width:6px;
+				height:6px;
+				margin:0 6px;
+
+				border-radius: 50%;
+				background:@blue-dark;
+				opacity: 0.3;
+				vertical-align: middle;
+			}
+			.bullets li.active{
+				box-sizing: content-box;
+				background:white;
+				border:3px solid @blue-dark;
+				opacity:1;
+			}
+
+
