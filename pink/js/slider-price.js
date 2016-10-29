@@ -4,18 +4,18 @@ $(function() {
   var slider = $('.slider2'),
     sliderContent = slider.html(),                      // Содержимое слайдера
     slideWidth = $('.slider-box2').outerWidth(),         // Ширина слайдера
-    slideCount = $('.slider2 .price__item').length,               // Количество слайдов
+    slideCount = $('.slider2 .price__item').length-1,               // Количество слайдов
     prev = $('.slider-box2 .prev'),                      // Кнопка "назад"
     next = $('.slider-box2 .next'),                      // Кнопка "вперед"
-    slideNum = 2,                                       // Номер текущего слайда
-  index =1,
+    slideNum = 1,                                       // Номер текущего слайда
+  index =0,
   clickBullets=0,
-    sliderInterval = 3300,                              // Интервал смены слайдов
+    sliderInterval = 3500,                              // Интервал смены слайдов
     animateTime = 1000,                                 // Время смены слайдов
     course = 1,                                         // Направление движения слайдера (1 или -1)
     margin = - slideWidth;                              // Первоначальное смещение слайдов
  
-  for (var i=0; i<slideCount-1; i++)                      // Цикл добавляет буллеты в блок .bullets
+  for (var i=0; i<slideCount; i++)                      // Цикл добавляет буллеты в блок .bullets
   {
     html=$('.bullets2').html() + '<li></li>';          // К текущему содержимому прибавляется один буллет
     $('.bullets2').html(html);                         // и добавляется в код
@@ -25,7 +25,7 @@ $(function() {
  
   $('.slider-box2 .bullets2 li:first').addClass('active');  
   $('.slider2 .price__item:last').clone().prependTo('.slider2');   // Копия последнего слайда помещается в начало.
-  $('.slider2 .price__item').eq(1).clone().appendTo('.slider2');   // Копия первого слайда помещается в конец.  
+  $('.slider2 .price__item').eq(2).clone().appendTo('.slider2');   // Копия первого слайда помещается в конец.  
   $('.slider2').css('margin-left', -slideWidth);         // Контейнер .slider сдвигается влево на ширину одного слайда.
  
   function nextSlide(){                                 // Запускается функция animation(), выполняющая смену слайдов.
