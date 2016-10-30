@@ -87,7 +87,6 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -149,8 +148,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -267,6 +264,7 @@ body {
 .main-nav__button--close {
   width: 50px;
   background: url(../img/icon-menu.png) no-repeat 0 0;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 .main-nav__button--close:hover {
@@ -581,8 +579,14 @@ body {
 @media (min-width:1200px) {
   .info__list {
     background: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     min-height: 600px;
   }
 }
@@ -791,7 +795,9 @@ body {
   .reviews__item .reviews__author-name {
     position: absolute;
     left: 50%;
-    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%);
     bottom: 20px;
     font-size: 20px;
   }
@@ -809,7 +815,9 @@ body {
     display: block;
     position: absolute;
     left: 50%;
-    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%);
     bottom: 0;
   }
 }
@@ -932,7 +940,9 @@ body {
   position: absolute;
   bottom: 0px;
   left: 50%;
-  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+      -ms-transform: translatex(-50%);
+          transform: translatex(-50%);
   height: 31px;
   vertical-align: middle;
   padding: 0;
@@ -1167,7 +1177,9 @@ body {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%);
     height: 31px;
     vertical-align: middle;
     padding: 0;
@@ -1216,12 +1228,18 @@ body {
   }
 }
 /* contact */
+.contact{
+
+  z-index: 20;
+ 
+}
 .contact-wrap {
   width: 100%;
   padding: 0 20px;
   text-align: center;
   z-index: 20;
   background: white;
+  padding-bottom: 80px;
 }
 @media (min-width:700px) {
   .contact-wrap {
@@ -1241,9 +1259,17 @@ body {
 }
 @media (min-width:1200px) {
   .contact__item-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 }
 .contact__item {
@@ -1259,10 +1285,16 @@ body {
 @media (min-width:1200px) {
   .contact__item {
     width: 30%;
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .contact__item:nth-child(2) {
-    order: 3;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 .contact__title {
@@ -1307,45 +1339,64 @@ body {
 /* map */
 .map {
   position: relative;
-  min-height: 250px;
-  background: url(../img/map.png) no-repeat 50% 100%;
-  background-size: 100%;
+  height: 300px;
+  background:
+  url(../img/triangle-white-footer-tabl.png) no-repeat 50% 0%,
+  url(../img/map-tab.jpg) no-repeat 50% 70%;
+    background-size: 100%;
 }
-.map::after {
+
+#map::before {
   content: "";
   display: block;
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 80px;
-  background: url(../img/triangle-white-footer.png) no-repeat 50% 100%;
-  background-size: 100%;
+  height: 95px;
+  z-index: 5;
+}
+
+#map {
+    display: none;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+
+}
+#map::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 95px;
+  z-index: 5;
+
 }
 @media (min-width:700px) {
-  .map::after {
+  #map {display: block;}
+  #map::before {
     height: 120px;
-    background: url(../img/triangle-white-footer-tabl.png) no-repeat 50% 100%;
-    background-size: 100%;
+     z-index: 5;
+    background: url(../img/triangle-white-footer-tabl.png) no-repeat 50% 0%;
+    background-size: 100% 120px;
   }
 }
 @media (min-width:1200px) {
-  .map::after {
-    height: 120px;
-    background: url(../img/triangle-white-footer-des.png) no-repeat 50% 100%;
-    background-size: 100%;
+
+  #map::before {
+    height: 150px;
+    background: url(../img/triangle-white-footer-des.png) no-repeat 50% 0%;
+    background-size: 100% 150px;
   }
 }
 @media (min-width:700px) {
   .map {
-    min-height: 520px;
-    background: url(../img/map-tab.jpg) no-repeat 50% 100%;
-    background-size: 100%;
+    height: 380px;
+   
   }
 }
 @media (min-width:1200px) {
   .map {
-    min-height: 700px;
-    background: url(../img/map-des.jpg) no-repeat 50% 100%;
-    background-size: 100%;
+    height: 500px;
   }
 }
 /* page-footer */
@@ -1355,7 +1406,7 @@ body {
 @media (min-width:700px) {
   .page-footer {
     display: inline-block;
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 128px;
     bottom: 0;
@@ -1371,9 +1422,18 @@ body {
   width: 100%;
   padding: 0 20px;
   min-height: 128px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (min-width:700px) {
   .footer-wrap {
