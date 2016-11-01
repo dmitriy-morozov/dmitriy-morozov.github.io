@@ -20,7 +20,12 @@ $(function() {
   }
   var  bullets = $('.slider-box .bullets li')          // Переменная хранит набор буллитов
  
- 
+
+
+   var width2= $('.slider-box').outerWidth(); 
+  $('.reviews__item').width(width2);  
+
+
   $('.slider-box .bullets li:first').addClass('active');  
   $('.slider .reviews__item:last').clone().prependTo('.slider');   // Копия последнего слайда помещается в начало.
   $('.slider .reviews__item').eq(1).clone().appendTo('.slider');   // Копия первого слайда помещается в конец.  
@@ -104,5 +109,16 @@ $(function() {
     sliderStop();                                       // Вызывается функция sliderStop() для приостановки работы слайдера
   }, nextSlide);                                        // Когда курсор уходит со слайдера, анимация возобновляется.
  
-  nextSlide();                                          // Вызов функции nextSlide()
+  nextSlide();    
+
+
+
+$(window).resize(function(){
+  var width2= $('.slider-box').outerWidth();
+  $('.reviews__item').width(width2);  
+
+});
+
+
+                                      // Вызов функции nextSlide()
 });

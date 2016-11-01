@@ -1,19 +1,25 @@
 $(function() { 
  if ($(window).width() < 699) {
 
+
+  
   var slider = $('.slider2'),
     sliderContent = slider.html(),                      // Содержимое слайдера
-    slideWidth = $('.slider-box2').outerWidth(),         // Ширина слайдера
+    slideWidth = $('.slider-box2').outerWidth(),
+             // Ширина слайдера
     slideCount = $('.slider2 .price__item').length-1,               // Количество слайдов
     prev = $('.slider-box2 .prev'),                      // Кнопка "назад"
-    next = $('.slider-box2 .next'),                      // Кнопка "вперед"
+    next = $('.slider-box2 .next'), 
     slideNum = 1,                                       // Номер текущего слайда
   index =0,
   clickBullets=0,
     sliderInterval = 3500,                              // Интервал смены слайдов
     animateTime = 1000,                                 // Время смены слайдов
-    course = 1,                                         // Направление движения слайдера (1 или -1)
-    margin = - slideWidth;                              // Первоначальное смещение слайдов
+    course = 1,   
+                                          // Направление движения слайдера (1 или -1)
+    margin = - slideWidth; 
+
+                                 // Первоначальное смещение слайдов
  
   for (var i=0; i<slideCount; i++)                      // Цикл добавляет буллеты в блок .bullets
   {
@@ -107,5 +113,18 @@ $(function() {
   }, nextSlide);                                        // Когда курсор уходит со слайдера, анимация возобновляется.
  
   nextSlide();  
-  }                                        // Вызов функции nextSlide()
+  
+var width3= $('.slider-box2').outerWidth(); 
+  $('.price__item').width(width3);  
+  
+  }       
+
+
+$(window).resize(function(){
+  var width3= $('.slider-box2').outerWidth(); 
+  $('.price__item').width(width3);  
 });
+
+                              // Вызов функции nextSlide()
+});
+
