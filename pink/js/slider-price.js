@@ -1,6 +1,8 @@
 $(function() { 
  if ($(window).width() < 699) {
 
+ $(".price__item").removeClass("slider--no-js");
+ $(".slider2").removeClass("slider--no-js");
 
   
   var slider = $('.slider2'),

@@ -1,26 +1,23 @@
 	/* page-footer */
 
 
-	.page-footer {display: none;
+	.page-footer {
+		display: none;
+		z-index: 5;
 
 		@media @tablet-widths {
-
 			display: inline-block;
-			position:absolute;
+			position:relative;
 			width:100%;
 			min-height: 128px;
 			bottom:0;
-
-
 			background:white;
-
-
+			z-index: 5;
 		}
 
 		@media @desktop-widths{
 			min-height: 200px;
-
-
+			z-index: 5;
 		}
 	}
 
