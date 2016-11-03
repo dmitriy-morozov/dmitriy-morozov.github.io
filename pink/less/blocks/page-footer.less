@@ -37,21 +37,46 @@
 		}
 	}
 
-	.footer__logo img{
-		@media @desktop-widths{
+.footer__logo {
+
+	@media @tablet-widths {
+		.logotype-footer-desktop {
 			display: none;
+		}
+		
+		.logotype-footer-tablet{
+			display: inline-block;
 		}
 	}
 
-	.footer__logo{
-		@media @desktop-widths{
-			display: inline-block;
-			width:147px;
-			height:65px;
-			background:url(../img/logotype-blue-desktop.png) no-repeat 0 50%;
-			background-size: 147px auto;
+	@media @desktop-widths{
+		.logotype-footer-tablet {
+			display: none;
 		}
+
+		.logotype-footer-desktop {
+			display: inline-block;
+			
+		}
+		
 	}
+}
+
+
+.footer__logo:hover .logotype{
+	fill:@red;
+}
+
+.footer__logo:active .logotype-text{
+	fill:#283645;
+}
+
+.footer__logo:active .logotype{
+	opacity:0.3;
+}
+
+
+
 
 
 	.social__btn {

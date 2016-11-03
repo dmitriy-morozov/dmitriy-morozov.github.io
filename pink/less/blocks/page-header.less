@@ -36,23 +36,23 @@
 		position: relative;
 		padding:0px;
 		background: #283645;
-		}
+	}
 
 
-		&--no-js .main-nav__logo{
-			margin:20px 20px;
-			padding-top: 20px;
-		}
+	&--no-js .main-nav__logo{
+		margin:20px 20px;
+		padding-top: 20px;
+	}
 
-		&--no-js .main-nav__title{
-			margin:15px 20px 0;
-		}
+	&--no-js .main-nav__title{
+		margin:15px 20px 0;
+	}
 
-		&--no-js .main-nav__button {
-			display: none;
-		}
+	&--no-js .main-nav__button {
+		display: none;
+	}
 
-		@media @desktop-widths{
+	@media @desktop-widths{
 		display: inline-block;
 		position: absolute;
 		padding:0px 130px;
@@ -65,30 +65,48 @@
 
 
 .main-nav__title {
-	@media @tablet-widths {
+	.logotype-mobile {
 		display: inline-block;
-		width:147px;
-		height:65px;
-		background:url(../img/logotype-white-tablet.png)
-		no-repeat;
-		background-size: 147px auto;
+	}
+
+	.logotype-tablet,
+	.logotype-desktop {
+		display: none;
+	}
+
+	@media @tablet-widths {
+		.logotype-mobile,
+		.logotype-desktop {
+			display: none;
+		}
+		
+		.logotype-tablet {
+			display: inline-block;
+		}
 	}
 
 	@media @desktop-widths{
-		display: inline-block;
-		background:url(../img/logotype-white-desktop.png)
-		no-repeat;
-		background-size: 147px auto;
-		width:150px;
-		margin-top:25px;
+		.logotype-tablet,
+		.logotype-mobile {
+			display: none;
+		}
+
+		.logotype-desktop {
+			display: inline-block;
+			margin-top: 15px;
+		}
+		
 	}
 }
 
 
-.main-nav__logo{
-	@media @tablet-widths {
-		display: none;
-	}
+.main-nav__title:hover .logotype{
+	fill:@red;
+}
+
+.main-nav__title:active .logotype{
+	fill:@white;
+	opacity:0.3;
 }
 
 
@@ -99,16 +117,12 @@
 	background: url(../img/menu-cross.png) no-repeat 0 0;
 
 	&:hover{
-
 		background:url(../img/menu-cross-hvr.png) no-repeat 0 0;
-
 	}
 
 	&:active{
 		opacity:0.3;
-
 	}
-
 
 	&--close {
 		width: 50px;
@@ -148,12 +162,12 @@
 
 	&--closed {
 		@media @mobile-widths{
-		display: none;
+			display: none;
 		}
 
 		@media @tablet-widths{
-		display: none;	
-	}
+			display: none;	
+		}
 	}
 	
 
@@ -167,7 +181,7 @@
 		width:73%;
 		min-height:30px;
 		margin-left:13%;
-		top:-30px;
+		top:0px;
 		z-index: 22;
 		vertical-align: middle;
 		background:none;
@@ -418,3 +432,11 @@
 
 }
 
+.menu-burger{
+	border:1px solid black;
+	fill:red;
+}
+
+.menu-burger:hover{
+	fill:red;
+}
