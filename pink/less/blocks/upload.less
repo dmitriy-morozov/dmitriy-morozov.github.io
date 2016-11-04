@@ -1,0 +1,282 @@
+
+
+
+
+
+.upload__title-wrap {
+	position: relative;
+	bottom:0;
+	width:100%;
+	background:white;
+	text-align: center;
+}
+
+.upload__title {
+	margin:0 auto;
+	padding:55px;
+	color:@blue-dark;
+	font-size: @font-size-base;
+	line-height: 30px;
+
+	@media @tablet-widths {
+		width:67%;
+		font-size:@font-size-medium;
+	}
+
+	@media @desktop-widths{
+		width:48%;
+	}
+}
+
+
+
+
+
+.upload__form-wrap{
+	display: inline-block;
+	width:100%;
+	background:@gray-light;
+	padding:20px 20px;
+
+	@media @tablet-widths {
+		width:auto;
+		padding:60px 42px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@media @desktop-widths {
+		margin:0 130px;
+		width:auto;
+	}
+}
+
+
+.upload__image {
+	display: block;
+	margin:0 auto;
+	width:300px;
+	height:400px;
+	background:url(../img/photo-7-mobile.jpg) no-repeat 50% 50%;
+	background-size: 100%;
+
+	@media @tablet-widths {
+		background:url(../img/photo-7-tablet.jpg) no-repeat 50% 50%;
+		background-size: 100%;
+	}
+
+	@media @desktop-widths{
+		background:url(../img/photo-7-desktop.jpg) no-repeat 50% 50%;
+		background-size: 100%;
+	}
+}
+
+.upload__filter-wrap{
+	width:100%;
+	text-align: center;
+
+	@media @tablet-widths{
+		width:40%;
+		margin-left: 40px;
+	}
+
+	@media @desktop-widths{
+		width:50%;
+		margin-left: 90px;
+	}
+}
+
+.upload__filter{
+	margin:40px 0;
+	display: inline-block;
+	width:100%;
+	color:@blue-dark;
+	font-size: @font-size-base;
+	line-height: 24px;
+	text-align: center;
+
+	@media @tablet-widths {
+		margin:0;
+		height:230px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+}
+
+
+.crop {
+	display: inline-block;
+	position:relative;
+	vertical-align: middle;
+
+	@media @tablet-widths {
+		img{display: none;}
+		background:url(../img/crop-tablet.png) no-repeat 0% 50%;
+		height:75px;
+		display: flex;
+		align-items: center;
+		border-bottom:1px solid @black-transparent;
+	}
+
+	@media @desktop-widths{
+		background:url(../img/crop-desktop.png) no-repeat 0% 50%;
+	}
+}
+
+.fill {
+	display: inline-block;
+	position:relative;
+	vertical-align: middle;
+	margin:0 30px;
+
+	@media @tablet-widths {
+		img{display: none;}
+		background:url(../img/fill-tablet.png) no-repeat 0% 50%;
+		margin:0;
+		height:75px;
+		display: flex;
+		align-items: center;
+		border-bottom:1px solid @black-transparent;
+	}
+
+	@media @desktop-widths{
+		background:url(../img/fill-desktop.png) no-repeat 0% 50%;
+	}
+
+}
+
+
+.contrast {
+	display: inline-block;
+	position:relative;
+	vertical-align: middle;
+
+	@media @tablet-widths {
+		img{display: none;}
+		background:url(../img/contrast-tablet.png) no-repeat 0% 50%;
+		height:75px;
+		display: flex;
+		align-items: center;
+		border-bottom:1px solid @black-transparent;
+	}
+
+	@media @desktop-widths{
+		background:url(../img/contrast-desktop.png) no-repeat 0% 50%;
+	}
+}
+
+
+.slider-filter {
+	position:relative;
+	display: block;
+	margin:0 auto;
+	margin-bottom: 50px;
+	width:60%;
+	height:2px;
+	text-align: center;
+	background:black;
+
+	@media @tablet-widths {
+		margin:0 auto;
+		width:60%;
+	}
+
+}
+
+
+
+
+.slider-4:after,
+.slider-filter:after {
+	content:'';
+	position:absolute;
+	right:15%;
+	top:-4px;
+	display: inline-block;
+	width:10px;
+	height:10px;
+	background:white;
+	border:2px solid @red;
+	border-radius: 50%;
+
+}
+
+.slider-1:after {
+	left:18%;
+}
+
+
+.slider-3:after {
+	right:30%;
+}
+
+.slider-1,
+.slider-2,
+.slider-3 {
+	display: none;
+
+	@media @tablet-widths {
+		display: inline-block;
+	}
+}
+
+.slider-4 {
+	@media @tablet-widths {
+		display: none;
+	}
+}
+
+
+.btn-block {
+	margin:0 -20px;
+	border-top:1px solid @black-transparent;
+	background:@gray-light;
+	padding:40px 20px;
+	margin:0 auto;
+
+
+	@media @tablet-widths {
+		border-top:none;
+	}
+
+	@media @desktop-widths {
+		margin:0;
+		padding:0;
+		padding-top: 140px;
+	}
+}
+
+
+
+.upload-btn {
+	width:100%;
+	max-width: 300px;
+
+	@media @desktop-widths {
+		width:42%;
+	}
+}
+
+
+.upload-btn:first-child {
+	margin-bottom: 15px;
+	color:@red;
+	border-color: @red;
+
+	@media @desktop-widths {
+		margin-right: 50px;
+	}
+}
+
+.upload-btn:last-child {
+	color:@black-transparent;
+	border-color: @black-transparent;
+}
+
+
+
