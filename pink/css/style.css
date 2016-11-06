@@ -239,7 +239,7 @@ img {
 }
 body {
   width: 100%;
-  min-width: 320px;
+  min-width: 260px;
   max-width: 1440px;
   margin: 0 auto;
   font: 14px/1.375 'Open Sans', "OpenSans", sans-serif;
