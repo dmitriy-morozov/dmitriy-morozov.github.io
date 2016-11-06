@@ -1,7 +1,13 @@
-FileETag MTime Size 
-<ifmodule mod_expires.c> 
-<filesmatch ".(ico|jpg|gif|png|css|js)$"> 
-ExpiresActive on 
-ExpiresDefault "access plus 10 minutes"
-</filesmatch> 
-</ifmodule>
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4)$">
+Header set Cache-Control "max-age=600, must-revalidate"
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+Header unset Last-Modified
+</FilesMatch>
+#2 hours
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+Header set Cache-Control "max-age=600, must-revalidate"
+</FilesMatch>
+<FilesMatch "\.(js|css)$">
+SetOutputFilter DEFLATE
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+</FilesMatch>
