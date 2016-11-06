@@ -65,8 +65,7 @@
 
 
 .main-nav__title {
-  color:transparent;
-
+	color:transparent;
 
 	.logotype-mobile {
 		display: inline-block;
@@ -93,25 +92,22 @@
 		.logotype-mobile {
 			display: none;
 		}
-
 		.logotype-desktop {
 			display: inline-block;
 			margin-top: 15px;
 		}
-		
+	}
+	.logotype{
+		fill:white;
+	}
+	&:hover .logotype{
+		fill:@red;
+	}
+	&:active .logotype{
+		fill:@white;
+		opacity:0.3;
 	}
 }
-
-
-.main-nav__title:hover .logotype{
-	fill:@red;
-}
-
-.main-nav__title:active .logotype{
-	fill:@white;
-	opacity:0.3;
-}
-
 
 .main-nav__button {
 	float: right;
@@ -285,49 +281,52 @@
 			text-transform: none;
 			font-weight: normal;
 		}
-
 	}
-
 }
 
 
-
-
-.intro {position: relative;
+.intro {
+	position: relative;
 	text-align: center;
 }
-
 
 .header__intro {
 	position: relative;
-	min-height: 460px;
+	height: 450px;
 	text-align: center;
+	background: @blue-dark;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
+	background-size:cover;
 
-	background: url(../img/iphone-5-in-hand.png) no-repeat 50% 175px,
-
-	url(../img/back-mobile@1x.png) no-repeat 50% 100%,
-	@blue-dark;
-	background-size: 320px, cover;
-
-
-
+	@media @retina {
+		background: url(../img/bg-back-mobile@2x.jpg) no-repeat 50% 0%;
+		background-size: 700px auto;
+	}
 
 	@media @tablet-widths {
-		background: url(../img/iphone-5-in-hand-tablet.png) no-repeat  80% 100%,
-		url(../img/back-tablet@1x.jpg) no-repeat 50% 100%,
-		@blue-dark;
-		background-size: 700px, cover;
-
-		min-height: 725px;
+		height: 725px;
+		background: url(../img/bg-back-tablet@1x.jpg) no-repeat 50% 0%;
+		
+		@media @retina {
+			background: url(../img/bg-back-tablet@2x.jpg) no-repeat 50% 0%;
+			background-size: 1200px auto;
+		}
 	}
 
 	@media @desktop-widths{
-		background: url(../img/iphone-5-in-hand-desk.png) no-repeat 75% 100%,
-		url(../img/back-desktop.jpg) no-repeat 50% 100%,
-		@blue-dark;
+		height: 855px;
+		background: url(../img/bg-back-desktop@1x.jpg) no-repeat 50% 0%;
+		@media @retina {
+			background: url(../img/bg-back-desktop@2x.jpg) no-repeat 50% 0%;
+			background-size: 2560px auto;
+		}
+	}
 
-		background-size: 1200px, cover;
-		min-height: 855px;
+	img {
+		position: absolute;
+		bottom:0;
+		left:50%;
+		transform:translatex(-50%);
 	}
 
 }
