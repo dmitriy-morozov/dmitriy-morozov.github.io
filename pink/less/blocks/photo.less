@@ -1,3 +1,7 @@
+.main-nav__header {
+	margin-top: 20px;
+}
+
 .photo img{
 	width:100%;
 }
@@ -17,7 +21,6 @@
 	}
 
 	@media @tablet-widths {
-		margin:-50px 0;
 		height: 670px;
 		background: url(../img/bg-back-tablet@1x.jpg) no-repeat 50% 0%;
 		
@@ -40,29 +43,30 @@
 
 
 .header-photo__title {
-	padding-top: 100px;
+	margin:0 auto;
+	text-align: center;
+	padding-top: 200px;
 	color:white;
 	font-family: OpenSansLight;
 	font-size: @font-size-big;
 
 	@media @tablet-widths {
-		padding-top: 200px;
+		width:70%;
 		font-size:@font-size-big_desktop;
 	}
-
 }
 
 
 .photo__title-wrap {
-	position: absolute;
-	bottom:0;
+	position: relative;
+	text-align: center;
 	width:100%;
+	padding:55px;
 	background:white;
 }
 
 .photo__title {
 	margin:0 auto;
-	padding:55px;
 	color:@blue-dark;
 	font-size: @font-size-base;
 	line-height: 30px;
