@@ -249,6 +249,7 @@ body {
 }
 /* page-header */
 .page-header {
+  display: block;
   position: relative;
   min-height: 460px;
 }
@@ -256,13 +257,14 @@ body {
   position: absolute;
   z-index: 33;
   width: 100%;
+  top: 0px;
   padding: 20px;
   background: rgba(0, 0, 0, 0.1);
 }
 @media (min-width:700px) {
   .main-nav__header {
     padding: 25px 40px;
-    min-height: 110px;
+    min-height: 100px;
   }
 }
 .main-nav__header--open {
@@ -293,7 +295,7 @@ body {
     display: inline-block;
     position: absolute;
     padding: 0px 130px;
-    min-height: 90px;
+    min-height: 110px;
     background: rgba(0, 0, 0, 0.1);
   }
 }
@@ -1586,16 +1588,12 @@ body {
 .page-footer-vision {
   display: block;
 }
-.main-nav__header {
-  margin-top: 20px;
-}
 .photo img {
   width: 100%;
 }
 .photo__intro {
-  margin: -25px 0 -65px;
   position: relative;
-  min-height: 420px;
+  min-height: 460px;
   text-align: center;
   background: #1d2630;
   background: url(../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
@@ -1651,6 +1649,7 @@ body {
   width: 100%;
   padding: 55px;
   background: white;
+  border: 1px solid blue;
 }
 .photo__title {
   margin: 0 auto;
