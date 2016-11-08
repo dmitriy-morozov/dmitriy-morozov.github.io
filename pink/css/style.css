@@ -240,7 +240,7 @@ img {
 body {
   width: 100%;
   min-width: 260px;
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
   font: 14px/1.375 'Open Sans', "OpenSans", sans-serif;
   color: #fff;
@@ -656,7 +656,7 @@ body {
 @media (min-width:1200px) {
   .information__wrapper {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -800,7 +800,7 @@ body {
 @media (min-width:700px) and (min-width:1200px) {
   .diagram {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -821,7 +821,7 @@ body {
 @media (min-width:1200px) and (min-width:1200px) {
   .diagram {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -849,7 +849,7 @@ body {
 @media (min-width:1200px) and (min-width:1200px) {
   .diagram-wrap {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -1102,7 +1102,7 @@ body {
 @media (min-width:700px) and (min-width:1200px) {
   .price__wrapper {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -1312,7 +1312,7 @@ body {
 @media (min-width:1200px) {
   .contact-wrap {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -1480,7 +1480,7 @@ body {
 @media (min-width:1200px) {
   .footer-wrap {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
@@ -2088,7 +2088,7 @@ input[type=range]:focus::-webkit-slider-thumb {
 @media (min-width:1200px) {
   .contest-form-group {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     padding: 0 130px;
   }
 }
