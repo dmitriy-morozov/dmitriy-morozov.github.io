@@ -248,7 +248,7 @@ body {
 .page-header {
   display: block;
   position: relative;
-  height: 460px;
+  min-height: 460px;
 }
 .main-nav__header {
   position: absolute;
