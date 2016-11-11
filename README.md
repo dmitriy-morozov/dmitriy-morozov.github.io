@@ -1,10 +1,10 @@
-#Портфолио - Дмитрий Морозов
-# [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
+###Портфолио - Дмитрий Морозов
+### [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
 ---
 ##Немного обо мне:
 Привет! Меня зовут Дмитрий Морозов и я веб-разработчик из Славянска. 
 
-_Мои навыки:_
+***Мои навыки:***
 
 - HTML5;
 - CSS3;
@@ -18,17 +18,18 @@ _Мои навыки:_
 В процессе изучения: JavaScript, jQuery.
 
 
-_Мои инструменты:_
+***Мои инструменты:***
 
-- PHOTOSHOP (необходимые навыки для вёрстки);
+- Photoshop (необходимые навыки для вёрстки);
 - Sublime Text 3;  
 - Препроцессор LESS;
 - GULP (автоматизация сборки проекта и оптимизация файлов);
 - GIT. 
 
 ---
-Примеры кода можно увидеть на GitHub # [https://github.com/dmitriy-morozov](https://github.com/dmitriy-morozov),
-Примеры работ находятся в портфолио # [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
+Примеры кода можно увидеть на GitHub [https://github.com/dmitriy-morozov](https://github.com/dmitriy-morozov)
+
+Примеры работ находятся в портфолио [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
 Связаться со мной можно несколькими способами:
 * Почта - dmitriy_morozov@mail.ua
 * ВК - https://vk.com/here_without_u
