@@ -1,5 +1,5 @@
-###Портфолио - Дмитрий Морозов
-### [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
+##Портфолио - Дмитрий Морозов
+## [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
 ---
 ##Немного обо мне:
 Привет! Меня зовут Дмитрий Морозов и я веб-разработчик из Славянска. 
@@ -27,7 +27,7 @@
 - GIT. 
 
 ---
-Примеры кода можно увидеть на GitHub [https://github.com/dmitriy-morozov](https://github.com/dmitriy-morozov)
+Примеры кода можно увидеть на GitHub [github.com/dmitriy-morozov](https://github.com/dmitriy-morozov)
 
 Примеры работ находятся в портфолио [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
 Связаться со мной можно несколькими способами:
