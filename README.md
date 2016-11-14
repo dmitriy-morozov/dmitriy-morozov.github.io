@@ -8,6 +8,8 @@
 
 - HTML5;
 - CSS3;
+- Bootstrap 3;
+- JavaScript, jQuery (подключить готовый плагин);
 - Работа с SVG;
 - Адаптивная, резиновая, фиксированная верстка;
 - Кроссбраузерная (Chrome, Opera, Firefox, Safari, Edge, IE 11);
