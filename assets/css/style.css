@@ -387,7 +387,7 @@ textarea.form-control {
 
 .start {
 	font-family: Raleway, "Times New Roman", Times, sans-serif;
-	font-size: 16px;
+	font-size: 19px;
 	font-style: normal;
 	text-transform: none;
 	margin: 15px 0;
@@ -507,6 +507,16 @@ textarea.form-control {
 .social-links a:hover {
 	border: 1px solid rgba(255, 255, 255, .5);
 	color: rgba(255, 255, 255, .8);
+}
+
+.social-links--about a {
+	border: 1px solid gray;
+	color: gray;
+}
+
+.social-links--about a:hover {
+	border: 1px solid black;
+	color: black;
 }
 
 /* ---------------------------------------------- /*
@@ -874,98 +884,3 @@ figure.effect-bubba:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
-
-/*-----------------------*/
-/***** Quote Rotator *****/
-/*-----------------------*/
-
-.cbp-qtrotator {
-	position: relative;
-	margin: 3em auto 0em auto;
-	max-width: 90%;
-	width: 90%;
-}
-
-.cbp-qtrotator .cbp-qtcontent {
-	position: absolute;
-	min-height: 200px;
-	border-top: 1px solid #f4f4f4;
-	border-bottom: 1px solid #f4f4f4;
-	padding: 2em 0;
-	top: 0;
-	z-index: 0;
-	opacity: 0;
-	width: 100%;
-}
-
-.no-js .cbp-qtrotator .cbp-qtcontent {
-	border-bottom: none;
-}
-
-.cbp-qtrotator .cbp-qtcontent.cbp-qtcurrent,
-.no-js .cbp-qtrotator .cbp-qtcontent {
-	position: relative; 
-	z-index: 100;
-	pointer-events: auto;
-	opacity: 1;
-}
-
-.cbp-qtrotator .cbp-qtcontent:before,
-.cbp-qtrotator .cbp-qtcontent:after {
-	content: " ";
-	display: table;
-}
-
-.cbp-qtrotator .cbp-qtcontent:after {
-	clear: both;
-}
-
-.cbp-qtprogress {
-	position: absolute;
-	background: #FF5252;
-	height: 1px;
-	width: 0%;
-	top: 0;
-	z-index: 1000;
-}
-
-.cbp-qtrotator blockquote {
-	margin: 0;
-	padding: 0;
-    border: 0;
-    font-size: 12px;
-}
-
-.cbp-qtrotator blockquote p {
-	font-size: 2em;
-	color: #888;
-	font-weight: 300;
-	margin: 0.4em 0 1em;
-}
-
-.cbp-qtrotator blockquote footer {
-	font-size: 1.2em;
-}
-
-.cbp-qtrotator blockquote footer:before {
-	content: '― ';
-}
-
-.cbp-qtrotator .cbp-qtcontent img {
-	float: right;
-	margin-left: 3em;
-}
-
-/* Example for media query */
-@media screen and (max-width: 30.6em) { 
-
-	.cbp-qtrotator {
-		font-size: 70%;
-	}
-
-	.cbp-qtrotator img {
-		width: 80px;
-	}
-
-}
-
