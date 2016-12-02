@@ -1,0 +1,3 @@
+[2016-12-02 18:45:11] (ERROR @ D:\OpenServer\domains\localhost\core\model\phpthumb\modphpthumb.class.php : 121) phpThumb was unable to generate a thumbnail for: D:\OpenServer\domains\localhost\core\cache\phpthumb\localhost__src1276033c653eddc933d61820c4a078a9_par0ba78bb0326502335f8683fdf331013a_dat1480623645.jpeg
+[2016-12-02 18:45:11] (ERROR @ D:\OpenServer\domains\localhost\core\model\phpthumb\modphpthumb.class.php : 133) Error outputting thumbnail:
+OutputThumbnail() failed because !is_resource($this->gdimg_output) in file "phpthumb.class.php" on line 618
