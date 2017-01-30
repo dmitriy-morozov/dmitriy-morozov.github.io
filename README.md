@@ -32,6 +32,7 @@
 Примеры кода можно увидеть на GitHub [github.com/dmitriy-morozov](https://github.com/dmitriy-morozov)
 
 Примеры работ находятся в портфолио [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
+
 Связаться со мной можно несколькими способами:
 * Почта - dmitriy_morozov@mail.ua
 * ВК - https://vk.com/here_without_u
