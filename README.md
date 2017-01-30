@@ -35,7 +35,7 @@
 
 Связаться со мной можно несколькими способами:
 * Почта - dmitriy_morozov@mail.ua
-* ВК - https://vk.com/here_without_u
+* ВК - https://vk.com/i_dmitriy_morozov
 
 
 
