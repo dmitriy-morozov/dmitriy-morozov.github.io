@@ -389,11 +389,10 @@ textarea.form-control {
 	position: absolute;
 	z-index: 5;
 	width: 100%;
-	top: 13%;
+	top: 0;
 	left: 0;
 	text-align: center;
 	text-shadow: 1px 0px 3px #ffffff;
-	transform: translate(0%, -50%);
 	padding: 0 15px
 }
 
@@ -401,11 +400,6 @@ textarea.form-control {
 	color: #e91e63;
 }
 
-@media (max-width: 480px) {
-	.intro__title {
-		top: 25%;
-	}
-}
 
 .start {
 	font-family: Raleway, "Times New Roman", Times, sans-serif;
