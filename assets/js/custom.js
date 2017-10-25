@@ -1,12 +1,12 @@
 //preloader
-$(window).on('load', function() {
+$(window).on('load', function () {
     $("#status").fadeOut();
     $("#preloader").delay(300).fadeOut("slow");
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     //smooth scroll to anchor
-    $("a[href*=\\#]").bind("click", function(e) {
+    $("a[href*=\\#]").bind("click", function (e) {
         var link = $(this);
         $("html, body").stop().animate({
             scrollTop: $(link.attr("href")).offset().top
@@ -21,7 +21,7 @@ $(document).ready(function() {
     wow.init();
 
     //scroll up button
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         $(this).scrollTop() > 100 ? $(".scroll-up").fadeIn() : $(".scroll-up").fadeOut()
     });
 
@@ -31,12 +31,12 @@ $(document).ready(function() {
     });
 
     //Home parallax
-    $("#home").on("mousemove", function(e) {
+    $("#home").on("mousemove", function (e) {
         var o = $(window).width(),
             a = $(window).height(),
             n = .9 - e.pageX / o,
             i = .9 - e.pageY / a;
-        $(".intro__item").each(function(e, o) {
+        $(".intro__item").each(function (e, o) {
             var a = parseInt($(o).data("offset")),
                 r = "translate3d(" + Math.round(n * a) + "px," + Math.round(i * a) + "px, 0px)";
             $(o).css({
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     //resize home image
     $(".pfblock-image").height($(window).height());
-    $(window).resize(function() {
+    $(window).resize(function () {
         $(".pfblock-image").height($(window).height())
     });
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
     }
 
     //Sticky SVG navbar
-    $('#home').waypoint(function(dir) {
+    $('#home').waypoint(function (dir) {
         if (dir === 'down') {
             $(".menu-svg").show();
         }
@@ -82,18 +82,18 @@ $(document).ready(function() {
     });
 
     //Synchronize link with block and animate
-    $('.pfblock').waypoint(function() {
+    $('.pfblock').waypoint(function () {
         var hash = $(this).attr('id');
         $(navLi).removeClass('active');
 
-        $.each(navLi, function() {
+        $.each(navLi, function () {
             href = $(this).children('a').attr('href').slice(1);
             if (href == hash) {
                 $(this).addClass("active");
             }
         });
 
-        $.each(navSVG, function() {
+        $.each(navSVG, function () {
             lunar.removeClass(this, 'active');
 
             if (lunar.hasClass(this, hash)) {
@@ -104,19 +104,19 @@ $(document).ready(function() {
     }, {
         offset: '50%'
     });
-    $('.pfblock').waypoint(function(dir) {
+    $('.pfblock').waypoint(function (dir) {
         if (dir === 'up') {
             var hash = $(this).attr('id');
             $(navLi).removeClass('active');
 
-            $.each(navLi, function() {
+            $.each(navLi, function () {
                 href = $(this).children('a').attr('href').slice(1);
                 if (href == hash) {
                     $(this).addClass("active");
                 }
             });
 
-            $.each(navSVG, function() {
+            $.each(navSVG, function () {
                 lunar.removeClass(this, 'active');
 
                 if (lunar.hasClass(this, hash)) {
@@ -129,7 +129,7 @@ $(document).ready(function() {
     });
 
     //click on svg link
-    $('.menu-svg__item').click(function() {
+    $('.menu-svg__item').click(function () {
         var name = $(this).attr('name');
         $(location).attr('href', '#' + name);
     });
@@ -144,7 +144,7 @@ $(document).ready(function() {
     }
 
     //draw timeline when scrolling
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         var draw = pathDimensions * scrollpercent;
 
@@ -152,8 +152,8 @@ $(document).ready(function() {
     });
 
     //Skills chart
-    $("#skills").waypoint(function() {
-        $("#skills .chart").each(function() {
+    $("#skills").waypoint(function () {
+        $("#skills .chart").each(function () {
             $(this).easyPieChart({
                 size: 140,
                 animate: 2e3,
@@ -169,8 +169,8 @@ $(document).ready(function() {
     });
 
     //Instruments chart
-    $("#instruments").waypoint(function() {
-        $("#instruments .chart").each(function() {
+    $("#instruments").waypoint(function () {
+        $("#instruments .chart").each(function () {
             $(this).easyPieChart({
                 size: 140,
                 animate: 2e3,

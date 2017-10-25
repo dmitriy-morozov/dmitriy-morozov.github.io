@@ -204,7 +204,7 @@ textarea.form-control {
 
 .triangle-before {
 	position: absolute;
-	top: -50px;
+	top: -48px;
 	width: 100%;
 	height: 50px;
 	z-index: 2;
@@ -212,7 +212,7 @@ textarea.form-control {
 
 .triangle-after {
 	position: absolute;
-	bottom: -50px;
+	bottom: -48px;
 	width: 100%;
 	height: 50px;
 	z-index: 2;
@@ -830,7 +830,8 @@ textarea.form-control {
 .grid figure,
 .grid figure img {
 	position: relative;
-	max-width: 100%
+	width: 100%;
+	height: auto;
 }
 
 .grid figure {
