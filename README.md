@@ -1,7 +1,7 @@
-##Portfolio
+# Portfolio
 [Dmitry Morozov](https://dmitriy-morozov.github.io)
 ---
-##A little bit about yourself:
+## A little bit about yourself:
 
 Hello! I'm a web developer from Slavyansk. I like to write beautiful code - beautiful both from the point of view of logical structure and design. I always care about the adaptability of layout and the convenience of its further use.
 
