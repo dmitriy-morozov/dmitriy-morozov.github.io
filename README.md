@@ -1,41 +1,40 @@
-##Портфолио - Дмитрий Морозов
-## [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
+##Portfolio
+[Dmitry Morozov](https://dmitriy-morozov.github.io)
 ---
-##Немного обо мне:
-Привет! Меня зовут Дмитрий Морозов и я веб-разработчик из Славянска. 
+##A little bit about yourself:
 
-***Мои навыки:***
+Hello! I'm a web developer from Slavyansk. I like to write beautiful code - beautiful both from the point of view of logical structure and design. I always care about the adaptability of layout and the convenience of its further use.
 
-- HTML5;
-- CSS3;
-- Bootstrap 3;
-- JavaScript, jQuery (подключить готовый плагин);
-- Работа с SVG;
-- Адаптивная, резиновая, фиксированная верстка;
-- Кроссбраузерная (Chrome, Opera, Firefox, Safari, Edge, IE 11);
-- Валидная разметка по методологии БЭМ;
-- Подход Mobile First;
-- Ретинизация и оптимизация.
+**My skills:**
 
-В процессе изучения: JavaScript, jQuery.
+- Magento 1, 2;
+- HTML5, CSS3, Bootstrap 3;
+- JavaScript, jQuery;
+- AJAX, API;
+- Preprocessors LESS, SASS;
+- SVG;
+- Adaptive, rubber, fixed layout;
+- Cross-browser (Chrome, Opera, Firefox, Safari, Edge, IE 11);
+- Valid marking according to BEM methodology;
+- Mobile First;
+- Retinization and optimization.
 
+**My instruments:**
 
-***Мои инструменты:***
-
-- Photoshop (необходимые навыки для вёрстки);
-- Sublime Text 3;  
-- Препроцессор LESS;
-- GULP (автоматизация сборки проекта и оптимизация файлов);
-- GIT. 
+- PhpStorm;
+- Adobe Photoshop, Adobe Illustrator;
+- GIT;
+- GULP (automate project assembly and optimize files).
 
 ---
-Примеры кода можно увидеть на GitHub [github.com/dmitriy-morozov](https://github.com/dmitriy-morozov)
+Code examples can be seen on GitHub [github.com/dmitriy-morozov](https://github.com/dmitriy-morozov)
 
-Примеры работ находятся в портфолио [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
+Examples of work are in the portfolio [dmitriy-morozov.github.io](https://dmitriy-morozov.github.io)
 
-Связаться со мной можно несколькими способами:
-* Почта - dmitriy_morozov@mail.ua
-* ВК - https://vk.com/i_dmitriy_morozov
+My contacts:
+* Mail - dmitriy_morozov@mail.ua
+* Skype - dm_morozov1
+* VK - https://vk.com/i_dmitriy_morozov
 
 
 
