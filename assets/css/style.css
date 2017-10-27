@@ -801,7 +801,6 @@ textarea.form-control {
 }
 
 .menu-svg__timeline {
-	stroke: rgb(230, 35, 35);
 	stroke-width: 8;
 	fill: none;
 }

@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     // SVG navbar
     var navLi = $(".navbar-sticky li");
-    var navSVG = $(".menu-svg path");
+    var navSVG = $(".menu-svg path, .menu-svg line");
 
     // Add strokeDashoffset to all SVG path
     var svgPaths = navSVG;
