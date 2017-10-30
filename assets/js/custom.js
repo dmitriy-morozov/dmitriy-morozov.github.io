@@ -72,10 +72,10 @@ $(document).ready(function () {
     //Sticky SVG navbar
     $('#home').waypoint(function (dir) {
         if (dir === 'down') {
-            $(".menu-svg").show();
+            $(".menu-svg").css('opacity','1');
         }
         if (dir === 'up') {
-            $(".menu-svg").hide();
+            $(".menu-svg").css('opacity','0');
         }
     }, {
         offset: '-70%'
