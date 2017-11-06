@@ -1,8 +1,8 @@
 {
-  "name": "pink",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "description": "«Пинк» от HTML Academy",
+  "description": "Portfolio",
   "author": "Дмитрий Морозов",
   "repository": {
     "type": "git",
