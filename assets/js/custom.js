@@ -90,25 +90,26 @@ $(document).ready(function () {
     });
 
     //Synchronize link with block and animate
-    $('.pfblock').waypoint(function () {
-        var hash = $(this).attr('id');
-        $(navLi).removeClass('active');
+    $('.pfblock').waypoint(function (dir) {
+        if (dir === 'down') {
+            var hash = $(this).attr('id');
+            $(navLi).removeClass('active');
 
-        $.each(navLi, function () {
-            href = $(this).children('a').attr('href').slice(1);
-            if (href == hash) {
-                $(this).addClass("active");
-            }
-        });
+            $.each(navLi, function () {
+                href = $(this).children('a').attr('href').slice(1);
+                if (href == hash) {
+                    $(this).addClass("active");
+                }
+            });
 
-        $.each(navSVG, function () {
-            lunar.removeClass(this, 'active');
+            $.each(navSVG, function () {
+                lunar.removeClass(this, 'active');
 
-            if (lunar.hasClass(this, hash)) {
-                lunar.addClass(this, 'active');
-            }
-        });
-
+                if (lunar.hasClass(this, hash)) {
+                    lunar.addClass(this, 'active');
+                }
+            });
+        }
     }, {
         offset: '50%'
     });
