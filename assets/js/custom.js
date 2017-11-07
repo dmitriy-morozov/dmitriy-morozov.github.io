@@ -5,11 +5,19 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function () {
+    $(".navbar-toggle").bind("click", function () {
+        $(this).toggleClass('opened');
+    });
+
     //smooth scroll to anchor
     $("a[href*=\\#]").bind("click", function (e) {
         var link = $(this);
-        $("html, body").stop().animate({
-            scrollTop: $(link.attr("href")).offset().top
+        $('.navbar-toggle').trigger('click');
+
+        setTimeout(function () {
+            $("html, body").stop().animate({
+                scrollTop: $(link.attr("href")).offset().top
+            }, 300);
         }, 300);
         e.preventDefault();
     });
@@ -72,10 +80,10 @@ $(document).ready(function () {
     //Sticky SVG navbar
     $('#home').waypoint(function (dir) {
         if (dir === 'down') {
-            $(".menu-svg").css('opacity','1');
+            $(".menu-svg").css('opacity', '1');
         }
         if (dir === 'up') {
-            $(".menu-svg").css('opacity','0');
+            $(".menu-svg").css('opacity', '0');
         }
     }, {
         offset: '-70%'
