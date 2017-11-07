@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     //smooth scroll to anchor
-    $("a[href*=\\#]").bind("click", function (e) {
+    $(".navbar-collapse a[href*=\\#]").bind("click", function (e) {
         var link = $(this);
         $('.navbar-toggle').trigger('click');
 
