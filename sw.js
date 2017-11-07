@@ -1,7 +1,9 @@
 'use strict';
 importScripts('sw-toolbox.js');
 
-toolbox.precache(["/","index.html"]);
-toolbox.router.get('/*', toolbox.cacheFirst);
+toolbox.precache(['/'],['index.html'],['/assets/*']);
+
+toolbox.router.default = toolbox.cacheFirst;
+
 
 
