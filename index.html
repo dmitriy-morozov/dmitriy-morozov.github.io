@@ -61,12 +61,29 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function (err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
+                navigator.serviceWorker.register('precache-config.js').then(function (reg) {
+
+                    reg.onupdatefound = function () {
+                        var installingWorker = reg.installing;
+
+                        installingWorker.onstatechange = function () {
+                            switch (installingWorker.state) {
+                                case 'installed':
+                                    if (navigator.serviceWorker.controller) {
+                                        console.log('New or updated content is available.');
+                                    } else {
+                                        console.log('Content is now available offline!');
+                                    }
+                                    break;
+
+                                case 'redundant':
+                                    console.error('The installing service worker became redundant.');
+                                    break;
+                            }
+                        };
+                    };
+                }).catch(function (e) {
+                    console.error('Error during service worker registration:', e);
                 });
             });
         }
@@ -94,7 +111,7 @@
     </div>
 
     <a href="#about">
-        <div class="scroll-down">
+        <div class="home scroll-down">
 				<span>
 					<i class="fa fa-angle-down fa-2x"></i>
 				</span>
@@ -1109,16 +1126,16 @@
                 <form method="post" action="https://formspree.io/dmitriy_morozov@mail.ua" id="contact-form" target="_blank" rel="noopener">
                     <div class="form-group wow fadeInUp">
                         <label class="sr-only" for="c_name">Name</label>
-                        <input type="text" id="c_name" class="form-control" name="name" placeholder="Name">
+                        <input type="text" id="c_name" class="form-control" name="name" placeholder="Name" required>
                     </div>
                     <div class="form-group wow fadeInUp" data-wow-delay=".1s">
                         <label class="sr-only" for="c_email">E-mail</label>
-                        <input type="email" id="c_email" class="form-control" name="email" placeholder="E-mail">
+                        <input type="email" id="c_email" class="form-control" name="email" placeholder="E-mail" required>
                     </div>
                     <div class="form-group wow fadeInUp" data-wow-delay=".2s">
-                        <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
+                        <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message" required></textarea>
                     </div>
-                    <input type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s" value="Send message">
+                    <input type="submit" class="btn btn-lg btn-block btn-contact wow fadeInUp" data-wow-delay=".3s" value="Send message">
                 </form>
             </div>
         </div>

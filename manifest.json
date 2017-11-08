@@ -5,8 +5,8 @@
     "lang": "ru",
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff",
+    "theme_color": "#faec46",
+    "background_color": "#e71a64",
     "icons": [
         {
             "src": "favicons/android-chrome-36x36.png",

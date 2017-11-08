@@ -16,7 +16,6 @@ var browserSync = require('browser-sync').create();
 var run = require("run-sequence");
 var del = require("del");
 var uglify = require('gulp-uglify');
-var pump = require('pump');
 
 
 gulp.task("style", function() {
@@ -40,7 +39,7 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
 	.pipe(browserSync.reload({stream:true}));
-	
+
 });
 
 gulp.task("images", function() {
@@ -112,6 +111,17 @@ gulp.task("build", function(fn) {
       "symbols",
       fn
     );
+});
+
+gulp.task('sw', function(callback) {
+    var path = require('path');
+    var swPrecache = require('sw-precache');
+    var rootDir = 'assets';
+
+    swPrecache.write(path.join('precache-config.js'), {
+        staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,JPG,gif,svg,eot,ttf,woff,woff2}'],
+        stripPrefix: '/'
+    }, callback);
 });
 
 

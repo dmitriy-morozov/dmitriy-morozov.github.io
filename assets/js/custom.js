@@ -9,18 +9,43 @@ $(document).ready(function () {
         $(this).toggleClass('opened');
     });
 
+    //click on navbar link
+    $("a[href*=\\#]").bind("click", function (e) {
+        var link = $(this).attr("href");
+        var offsetTop = $(link).offset().top;
+
+        anchorScroll(offsetTop);
+        e.preventDefault();
+    });
+
+    //click on svg link
+    $('.menu-svg__item').click(function () {
+        var link = $(this).attr('name');
+        var offsetTop = $('#'+ link).offset().top;
+
+        anchorScroll(offsetTop);
+    });
+
     //smooth scroll to anchor
-    $(".navbar-collapse a[href*=\\#]").bind("click", function (e) {
-        var link = $(this);
-        $('.navbar-toggle').trigger('click');
+    var anchorScroll = function (offsetTop){
+        var scrollFromTop = $(window).scrollTop();
+        var offsetFromTop = offsetTop;
+        var scrollSpeed = (offsetFromTop - scrollFromTop);
+        var scrollSpeed = scrollSpeed > 0 ? scrollSpeed : (scrollSpeed * -1);
 
         setTimeout(function () {
             $("html, body").stop().animate({
-                scrollTop: $(link.attr("href")).offset().top
-            }, 300);
+                scrollTop: offsetFromTop
+            }, scrollSpeed);
         }, 300);
+    };
+
+    //hide navbar when click on link
+    $(".navbar-collapse a").bind("click", function (e) {
+        $('.navbar-toggle').trigger('click');
         e.preventDefault();
     });
+
 
     //init animate
     wow = new WOW({
@@ -66,7 +91,7 @@ $(document).ready(function () {
 
     // SVG navbar
     var navLi = $(".navbar-sticky li");
-    var navSVG = $(".menu-svg path, .menu-svg line");
+    var navSVG = $(".menu-svg path");
 
     // Add strokeDashoffset to all SVG path
     var svgPaths = navSVG;
@@ -76,6 +101,44 @@ $(document).ready(function () {
         path.style.strokeDasharray = pathDimensions;
         path.style.strokeDashoffset = pathDimensions;
     }
+
+    //Scroll home section
+    if (/Firefox/i.test(navigator.userAgent)) {
+        //Firefox
+        $(window).bind('DOMMouseScroll', function (e) {
+            if (e.originalEvent.detail > 0) {
+                if ($('#home').height() > $(window).scrollTop()) {
+                    $('.home.scroll-down').trigger('click');
+                }
+            }
+        });
+
+    }
+    else {
+        //Another browsers
+        $(window).bind('mousewheel', function (event) {
+            if (event.originalEvent.wheelDelta <= 0) {
+                if ($('#home').height() > $(window).scrollTop()) {
+                    $('.home.scroll-down').trigger('click');
+                }
+            }
+        });
+    }
+
+    //For devices with touch
+    var touchstart;
+    $(document).bind('touchstart', function (e) {
+        touchstart = e.originalEvent.touches[0].clientY;
+    });
+
+    $(document).bind('touchend', function (e) {
+        var touchEnd = e.originalEvent.changedTouches[0].clientY;
+        if (touchstart > touchEnd + 5) {
+            if ($('#home').height() > $(window).scrollTop()) {
+                $('.home.scroll-down').trigger('click');
+            }
+        }
+    });
 
     //Sticky SVG navbar
     $('#home').waypoint(function (dir) {
@@ -137,27 +200,26 @@ $(document).ready(function () {
         offset: '-50%'
     });
 
-    //click on svg link
-    $('.menu-svg__item').click(function () {
-        var name = $(this).attr('name');
-        $(location).attr('href', '#' + name);
-    });
+    //SVG timeline with fix for Firefox
+    var line = $(".menu-svg__timeline").get(0);
+    var len = dist(line.x1.baseVal.value, line.x2.baseVal.value,
+        line.y1.baseVal.value, line.y2.baseVal.value);
 
-    //SVG timeline
-    var svgPaths = $('.menu-svg__timeline');
-    for (var x = 0; x < svgPaths.length; x++) {
-        var path = svgPaths[x];
-        var pathDimensions = path.getTotalLength();
-        path.style.strokeDasharray = pathDimensions;
-        path.style.strokeDashoffset = pathDimensions;
+    function dist(x1, x2, y1, y2) {
+        return Math.sqrt((x2 -= x1) * x2 + (y2 -= y1) * y2);
     }
+
+    $('.menu-svg__timeline').css({
+        'stroke-dasharray': len,
+        'stroke-dashoffset': len
+    });
 
     //draw timeline when scrolling
     $(window).scroll(function () {
         var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-        var draw = pathDimensions * scrollpercent;
+        var draw = len * scrollpercent;
 
-        $('.menu-svg__timeline').css('strokeDashoffset', pathDimensions - draw);
+        $('.menu-svg__timeline').css('strokeDashoffset', len - draw);
     });
 
     //Skills chart
