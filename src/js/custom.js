@@ -106,7 +106,7 @@ $(document).ready(function () {
         //Firefox
         $(window).bind('DOMMouseScroll', function (e) {
             if (e.originalEvent.detail > 0) {
-                if ($('#home').height() > $(window).scrollTop()) {
+                if (($('#home').height() - 50) > $(window).scrollTop()) {
                     $('.home.scroll-down').trigger('click');
                 }
             }
@@ -117,7 +117,7 @@ $(document).ready(function () {
         //Another browsers
         $(window).bind('mousewheel', function (event) {
             if (event.originalEvent.wheelDelta <= 0) {
-                if ($('#home').height() > $(window).scrollTop()) {
+                if (($('#home').height() - 50) > $(window).scrollTop()) {
                     $('.home.scroll-down').trigger('click');
                 }
             }
