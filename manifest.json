@@ -1,12 +1,14 @@
 {
     "name": "Dmitry Morozov - Front-End Developer (Magento)",
-    "short_name": "Dmitry Morozov",
-    "description": "Дмитрий Морозов Front-end разработчик (Magento). Создание сайтов в Славянске Краматорске Заказать разработку сайта Создать сайт визитка Разработать официальный сайт Сделать сайт магазин magento",
+    "short_name": "D.Morozov",
+    "description": "Дмитрий Морозов Front-end разработчик (Magento)",
     "lang": "ru",
+    "dir": "ltr",
     "start_url": "/",
     "display": "standalone",
+    ​​"orientation": "any",
     "theme_color": "#faec46",
-    "background_color": "#e71a64",
+    "background_color": "#faec46",
     "icons": [
         {
             "src": "favicons/android-chrome-36x36.png",

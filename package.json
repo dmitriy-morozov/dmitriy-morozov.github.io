@@ -25,6 +25,7 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
     "imagemin-optipng": "^5.2.1",
     "imagemin-pngquant": "^5.0.0",
     "run-sequence": "^1.2.2",
@@ -34,15 +35,15 @@
   "scripts": {
     "test": "editorconfig-cli",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "npm run build && gulp watcher"
   },
   "editorconfig-cli": [
     "*.html",
     "*.json",
     "*.js",
     "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.{less,scss}"
+    "images/**/*.svg",
+    "css/**/*.{scss}"
   ],
   "engines": {
     "node": "6.5"
