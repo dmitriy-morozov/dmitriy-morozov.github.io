@@ -39,11 +39,9 @@ gulp.task("style", function () {
                 sort: true
             })
         ]))
-        .pipe(gulp.dest("assets/css"))
         .pipe(minify())
         .pipe(rename("style.min.css"))
         .pipe(gulp.dest("assets/css"));
-
 });
 
 gulp.task('scripts', function (cb) {
