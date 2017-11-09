@@ -13,7 +13,6 @@ $(document).ready(function () {
     $("a[href*=\\#]").bind("click", function (e) {
         var link = $(this).attr("href");
         var offsetTop = $(link).offset().top;
-
         anchorScroll(offsetTop);
         e.preventDefault();
     });
@@ -21,17 +20,17 @@ $(document).ready(function () {
     //click on svg link
     $('.menu-svg__item').click(function () {
         var link = $(this).attr('name');
-        var offsetTop = $('#'+ link).offset().top;
-
+        var offsetTop = $('#' + link).offset().top;
         anchorScroll(offsetTop);
     });
 
     //smooth scroll to anchor
-    var anchorScroll = function (offsetTop){
+    var anchorScroll = function (offsetTop) {
         var scrollFromTop = $(window).scrollTop();
+        var scrollheight = $('body').prop('scrollHeight');
         var offsetFromTop = offsetTop;
-        var scrollSpeed = (offsetFromTop - scrollFromTop);
-        var scrollSpeed = scrollSpeed > 0 ? scrollSpeed : (scrollSpeed * -1);
+        var heightToScroll = Math.abs((offsetFromTop - scrollFromTop));
+        var scrollSpeed = heightToScroll/scrollheight * 3000;
 
         setTimeout(function () {
             $("html, body").stop().animate({
@@ -123,7 +122,8 @@ $(document).ready(function () {
                 }
             }
         });
-    };
+    }
+    ;
 
     //Sticky SVG navbar
     $('#home').waypoint(function (dir) {
