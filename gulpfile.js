@@ -19,7 +19,7 @@ var watch = require('gulp-watch');
 var pump = require('pump');
 var path = require('path');
 var swPrecache = require('sw-precache');
-var rootDir = 'assets';
+
 
 
 gulp.task("style", function () {
@@ -93,8 +93,13 @@ gulp.task("clean", function () {
 });
 
 gulp.task('sw', function (callback) {
+    var rootDir = '.';
     swPrecache.write(path.join('precache-config.js'), {
-        staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,JPG,gif,svg,eot,ttf,woff,woff2}'],
+        staticFileGlobs: [
+            rootDir + '/assets/**/*.{js,html,css,png,jpg,JPG,gif,svg,eot,ttf,woff,woff2}',
+            rootDir + '/favicons/*.{js,html,css,png,jpg,JPG,gif,svg,eot,ttf,woff,woff2}',
+            'index.html'
+         ],
         stripPrefix: '/'
     }, callback);
 });
