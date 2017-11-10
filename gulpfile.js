@@ -55,7 +55,7 @@ gulp.task('scripts', function (cb) {
 });
 
 gulp.task("images", function () {
-    return gulp.src("images/**/*.{png,jpg,gif}")
+    return gulp.src("src/images/**/*.{png,jpg,gif}")
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.jpegtran({progressive: true})
