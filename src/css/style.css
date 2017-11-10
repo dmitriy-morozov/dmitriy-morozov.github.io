@@ -1131,9 +1131,9 @@ figure.effect-goliath {
 
 figure.effect-goliath img,
 figure.effect-goliath h2 {
-	-webkit-transition: all 0.35s;
-	-o-transition: all 0.35s;
-	transition: all 0.35s;
+	-webkit-transition: transform  0.35s;
+	-o-transition: transform  0.35s;
+	transition: transform  0.35s;
 }
 
 figure.effect-goliath h2,
@@ -1156,7 +1156,7 @@ figure.effect-goliath p {
 	transition: opacity 0.35s, transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 	-webkit-transform: translate3d(0, 50px, 0);
-	transform: translate3d(0, 50px, 0);
+	transform: translate3d(0, 0, 0);
 }
 
 figure.effect-goliath:hover img {

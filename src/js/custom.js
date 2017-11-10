@@ -27,10 +27,10 @@ $(document).ready(function () {
     //smooth scroll to anchor
     var anchorScroll = function (offsetTop) {
         var scrollFromTop = $(window).scrollTop();
-        var scrollheight = $('body').prop('scrollHeight');
         var offsetFromTop = offsetTop;
         var heightToScroll = Math.abs((offsetFromTop - scrollFromTop));
-        var scrollSpeed = heightToScroll/scrollheight * 3000;
+        //1000px per 0.5s
+        var scrollSpeed = heightToScroll/1000 * 500;
 
         setTimeout(function () {
             $("html, body").stop().animate({
@@ -211,11 +211,11 @@ $(document).ready(function () {
     $("#skills").waypoint(function () {
         $("#skills .chart").each(function () {
             $(this).easyPieChart({
-                size: 140,
+                size: 125,
                 animate: 2e3,
                 lineCap: "butt",
                 scaleColor: !1,
-                barColor: "#FF5252",
+                barColor: "#e91e63",
                 trackColor: "transparent",
                 lineWidth: 10
             })
@@ -228,11 +228,11 @@ $(document).ready(function () {
     $("#instruments").waypoint(function () {
         $("#instruments .chart").each(function () {
             $(this).easyPieChart({
-                size: 140,
+                size: 125,
                 animate: 2e3,
                 lineCap: "butt",
                 scaleColor: !1,
-                barColor: "#FF5252",
+                barColor: "#e91e63",
                 trackColor: "transparent",
                 lineWidth: 10
             })
