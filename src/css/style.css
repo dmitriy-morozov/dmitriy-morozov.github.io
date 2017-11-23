@@ -127,10 +127,13 @@ body {
 	overflow-x: hidden
 }
 
-::-webkit-scrollbar-thumb{ background-color: #e91e63; }
-::-webkit-scrollbar-thumb:hover{ background-color: #e91e63c4; }
-::-webkit-scrollbar-track{ background-color: white }
-::-webkit-scrollbar{ width: 5px; }
+::-webkit-scrollbar-thumb { background-color: #e91e63; }
+
+::-webkit-scrollbar-thumb:hover { background-color: #e91e63c4; }
+
+::-webkit-scrollbar-track { background-color: white }
+
+::-webkit-scrollbar { width: 5px; }
 
 img {
 	max-width: 100%;
@@ -284,7 +287,7 @@ textarea.form-control {
 
 .btn-group-lg > .btn,
 .btn-lg {
-	padding: 10px 25px;
+	padding: 5px 25px;
 	font-size: 13px;
 	background: rgba(17, 17, 17, .8);
 	color: #ffffff
@@ -335,7 +338,8 @@ textarea.form-control {
 .triangle-before {
 	position: absolute;
 	top: -48px;
-	width: 100%;
+	left: -5%;
+	right: 0;
 	height: 50px;
 	z-index: 2;
 }
@@ -343,7 +347,8 @@ textarea.form-control {
 .triangle-after {
 	position: absolute;
 	bottom: -48px;
-	width: 100%;
+	left: -5%;
+	right: 0;
 	height: 50px;
 	z-index: 2;
 }
@@ -378,6 +383,12 @@ textarea.form-control {
 .pfblock-header {
 	text-align: center;
 	margin: 0 0 60px
+}
+
+@media (max-width: 767px) {
+	.pfblock-header {
+		margin: 0 0 20px
+	}
 }
 
 .pfblock-header-left {
@@ -896,9 +907,10 @@ textarea.form-control {
 }
 
 /*hack for ie*/
-@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+@media screen and (min-width: 0\0
+) and (min-resolution: +72dpi) {
 	.menu-svg path.active {
-		stroke-dashoffset: 0!important;
+		stroke-dashoffset: 0 !important;
 	}
 }
 
@@ -1071,7 +1083,7 @@ textarea.form-control {
 
 .grid figure img {
 	display: block;
-	min-height: auto;
+	min-height: 0;
 }
 
 .grid figure figcaption {
@@ -1131,9 +1143,9 @@ figure.effect-goliath {
 
 figure.effect-goliath img,
 figure.effect-goliath h2 {
-	-webkit-transition: transform  0.35s;
-	-o-transition: transform  0.35s;
-	transition: transform  0.35s;
+	-webkit-transition: transform 0.35s;
+	-o-transition: transform 0.35s;
+	transition: transform 0.35s;
 }
 
 figure.effect-goliath h2,
@@ -1159,7 +1171,7 @@ figure.effect-goliath p {
 	transform: translate3d(0, 0, 0);
 }
 
-figure.effect-goliath p a{
+figure.effect-goliath p a {
 	margin: 0 5px;
 }
 
@@ -1204,3 +1216,86 @@ figure.effect-goliath:hover p a {
 		margin: 0 0 30px
 	}
 }
+
+.portfolio-filters {
+	text-align: center;
+}
+
+.portfolio-filters button {
+	border-radius: 3px;
+	font-size: 14px;
+	background: #e91e63;
+	color: white;
+	border: 1px solid #e91e63;
+	margin: 0 5px;
+}
+
+.portfolio-filters button,
+.portfolio-filters button:hover,
+.portfolio-filters button:focus,
+.portfolio-filters button:active {
+	outline: none;
+}
+
+.portfolio-filters button:hover,
+.portfolio-filters button.active {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 8px 0px black;
+}
+
+.slick-slide {
+	height: auto;
+}
+
+.slick-prev, .slick-next {
+	top: auto;
+	left:auto;
+	right:auto;
+	bottom: -40px;
+}
+
+.slick-prev{
+	left: 50%;
+	transform: translateX(-20px);
+}
+
+.slick-next{
+	left: 50%;
+	transform: translateX(20px);
+}
+
+.slick-prev:before,
+.slick-next:before {
+	content: '';
+	display: block;
+	background: #e91e63;
+	width: 20px;
+	height:20px;
+	opacity:1;
+}
+
+.slick-prev:after,
+.slick-next:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 9px;
+	height: 9px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: translate(-50%,-50%)  rotate(-45deg);
+	-webkit-transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.slick-prev:after {
+	transform: translate(-50%,-50%)  rotate(135deg);
+	-webkit-transform: translate(-50%,-50%) rotate(135deg);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+	box-shadow: 1px 1px 8px 0 black;
+}
+

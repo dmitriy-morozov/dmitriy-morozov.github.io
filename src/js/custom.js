@@ -30,7 +30,7 @@ $(document).ready(function () {
         var offsetFromTop = offsetTop;
         var heightToScroll = Math.abs((offsetFromTop - scrollFromTop));
         //1000px per 0.5s
-        var scrollSpeed = heightToScroll/1000 * 500;
+        var scrollSpeed = heightToScroll / 1000 * 500;
 
         setTimeout(function () {
             $("html, body").stop().animate({
@@ -44,7 +44,6 @@ $(document).ready(function () {
         $('.navbar-toggle').trigger('click');
         e.preventDefault();
     });
-
 
     //init animate
     wow = new WOW({
@@ -123,7 +122,6 @@ $(document).ready(function () {
             }
         });
     }
-    ;
 
     //Sticky SVG navbar
     $('#home').waypoint(function (dir) {
@@ -159,7 +157,7 @@ $(document).ready(function () {
             });
         }
     }, {
-        offset: '50%'
+        offset: '40%'
     });
     $('.pfblock').waypoint(function (dir) {
         if (dir === 'up') {
@@ -240,4 +238,23 @@ $(document).ready(function () {
     }, {
         offset: "30%"
     });
+
+    //isotope filtering
+
+    var $grid = $('.portfolio-grid').isotope({
+        // options
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+    });
+
+    $('.portfolio-filters').on('click', 'button', function () {
+        /* return if current */
+        if ($(this).hasClass('active')) return;
+
+        /* active current */
+        $(this).addClass('active').siblings().removeClass('active');
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({filter: filterValue});
+    });
+
 });
