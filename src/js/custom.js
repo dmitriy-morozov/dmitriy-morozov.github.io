@@ -51,14 +51,16 @@ $(document).ready(function () {
     });
     wow.init();
 
-    //scroll up button
+    //scroll up button and sticky header
     $(window).scroll(function () {
-        $(this).scrollTop() > 100 ? $(".scroll-up").fadeIn() : $(".scroll-up").fadeOut()
-    });
-
-    //sticky header
-    $(".navbar-sticky").sticky({
-        topSpacing: 0
+        if ($(this).scrollTop() > $(this).outerHeight()) {
+            $(".scroll-up").fadeIn();
+            $(".header").addClass('fixed');
+        }
+        else {
+            $(".scroll-up").fadeOut();
+            $(".header").removeClass('fixed');
+        }
     });
 
     //Home parallax
@@ -88,7 +90,7 @@ $(document).ready(function () {
     });
 
     // SVG navbar
-    var navLi = $(".navbar-sticky li");
+    var navLi = $(".navbar li");
     var navSVG = $(".menu-svg path");
 
     // Add strokeDashoffset to all SVG path
@@ -240,8 +242,7 @@ $(document).ready(function () {
     });
 
     //isotope filtering
-
-    var $grid = $('.portfolio-grid').isotope({
+    var grid = $('.portfolio-grid').isotope({
         // options
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
@@ -254,7 +255,38 @@ $(document).ready(function () {
         /* active current */
         $(this).addClass('active').siblings().removeClass('active');
         var filterValue = $(this).attr('data-filter');
-        $grid.isotope({filter: filterValue});
+        grid.isotope({filter: filterValue});
     });
 
+    // portfolio compacting in mobile version
+    if ($(document).width() < 768) {
+        $('.portfolio-filters .all').trigger('click');
+        $('.portfolio-filters').hide();
+        $(".portfolio-item").slice(0, 2).fadeIn();
+        grid.isotope();
+
+        $(".portfolio-more").click(function () {
+            $(".portfolio-item:hidden").slice(0, 2).fadeIn();
+
+            if ($(".portfolio-item:hidden").length == 0) {
+                $(".portfolio-more").fadeOut();
+            }
+
+            setTimeout(function(){
+                grid.isotope();
+            }, 500);
+        });
+    }
+
+    $(window).resize(function () {
+        if ($(document).width() < 768) {
+            $('.portfolio-filters .all').trigger('click');
+            $('.portfolio-filters').hide();
+            $(".portfolio-item").slice(0, 2).show();
+            grid.isotope();
+        }
+        else {
+            $('.portfolio-filters').show();
+        }
+    });
 });
